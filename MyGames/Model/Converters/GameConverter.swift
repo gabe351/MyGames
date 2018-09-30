@@ -32,13 +32,15 @@ class GameConverter {
                     console: entry.console,
                     completed: entry.completed,
                     dateOfCompletion: entry.dateOfCompletion,
-                    personalNotes: entry.personalNotes)
+                    personalNotes: entry.personalNotes,
+                    releasedAt: "")
+        //        TODO: Get the year - 16 years ago
     }
     
     static func entitiesToEntries(_ entites: [Game]) -> [GameEntry] {
         
-        let entries = entites.map {
-            game -> GameEntry in entityToEntry(game)
+        let entries = entites.map { game -> GameEntry in
+            entityToEntry(game)
         }
         
         return entries
@@ -46,8 +48,8 @@ class GameConverter {
     
     static func entriesToEntites(_ entries: [GameEntry]) -> [Game] {
         
-        let entities = entries.map {
-            gameEntry -> Game in entryToEntity(gameEntry)
+        let entities = entries.map { gameEntry -> Game in
+            entryToEntity(gameEntry)
         }
         
         return entities

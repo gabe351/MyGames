@@ -12,7 +12,7 @@ class ConsoleEntry: Object {
     
     @objc dynamic var guid        = String()
     @objc dynamic var title       = String()
-    @objc dynamic var observation = String()
+    @objc dynamic var manufacturer = String()
     
     override static func primaryKey() -> String? {
         return "guid"

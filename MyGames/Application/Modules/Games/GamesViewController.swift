@@ -12,24 +12,18 @@ class GamesViewController: BaseViewController {
     
     @IBOutlet weak var gamesTableView: BaseTableView!
     
+    lazy var presenter: GamesPresenterContract = {
+        return GamesPresenter(view: self,
+                              getGames: InjectionUseCase.provideGetGames())
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        gamesTableView.set(elements: [
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw")
-            ], contract: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.loadGames()
     }
             
     override func didAddTapped() {
@@ -39,6 +33,14 @@ class GamesViewController: BaseViewController {
         
         navigationController?.pushViewController(formViewController,
                                                  animated: true)
+    }
+}
+
+extension GamesViewController: GamesViewContract {
+    
+    func show(games: [CellDto]) {
+        gamesTableView.set(elements: games,
+                           contract: self)
     }
 }
 

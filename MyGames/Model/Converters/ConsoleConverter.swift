@@ -16,7 +16,7 @@ class ConsoleConverter {
         
         entry.guid             = entity.guid
         entry.title            = entity.title
-        entry.observation      = entity.observation
+        entry.manufacturer      = entity.manufacturer
         
         return entry
     }
@@ -24,7 +24,7 @@ class ConsoleConverter {
     static func entryToEntity(_ entry: ConsoleEntry) -> Console {
         return Console(guid: entry.guid,
                        title: entry.title,
-                       observation: entry.observation)
+                       manufacturer: entry.manufacturer)
     }
     
     static func entitiesToEntries(_ entites: [Console]) -> [ConsoleEntry] {

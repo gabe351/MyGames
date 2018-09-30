@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Game {
+public struct Game {
     let guid: String
     let title: String
     let year: String
@@ -16,4 +16,5 @@ struct Game {
     let completed: Bool
     let dateOfCompletion: Date
     let personalNotes: String
+    let releasedAt: String
 }

@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Console {
+public struct Console {
     let guid: String
     let title: String
-    let observation: String
+    let manufacturer: String
 }
