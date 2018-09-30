@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Games" id="KgB-Zx-534"/>
+                    <navigationItem key="navigationItem" title="Games" largeTitleDisplayMode="always" id="KgB-Zx-534"/>
                     <connections>
                         <outlet property="gamesTableView" destination="NDL-3H-cnb" id="nrb-k6-LYr"/>
                     </connections>
@@ -102,7 +102,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Aef-O5-b2t"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Consoles" id="foR-IY-kkE"/>
+                    <navigationItem key="navigationItem" title="Consoles" largeTitleDisplayMode="always" id="foR-IY-kkE"/>
                     <connections>
                         <outlet property="consolesTableView" destination="Qfg-Ip-KAs" id="uEA-ni-PEC"/>
                     </connections>

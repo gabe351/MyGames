@@ -11,6 +11,7 @@ import UIKit
 class BaseTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     var cellDtos = [CellDto]()
+    weak var contract: BaseTableViewContract?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -22,8 +23,9 @@ class BaseTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         self.register(cell, forCellReuseIdentifier: BaseTableViewCell.IDENTIFIER)
     }
     
-    func set(elements: [CellDto]) {
+    func set(elements: [CellDto], contract: BaseTableViewContract) {
         self.cellDtos = elements
+        self.contract = contract
         reloadData()
     }
     
@@ -41,6 +43,6 @@ class BaseTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        contract?.didCellSelected()
     }                
 }

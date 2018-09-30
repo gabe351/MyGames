@@ -20,6 +20,16 @@
 		048DE4C02160EB3600FC5DBD /* BaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4BF2160EB3600FC5DBD /* BaseTableViewCell.xib */; };
 		048DE4C32160EC1000FC5DBD /* CellDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4C22160EC1000FC5DBD /* CellDto.swift */; };
 		048DE4C62160EF1400FC5DBD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4C52160EF1400FC5DBD /* BaseViewController.swift */; };
+		048DE4C92160F0A500FC5DBD /* BaseTableViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4C82160F0A500FC5DBD /* BaseTableViewContract.swift */; };
+		048DE4CB2160F14B00FC5DBD /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4CA2160F14B00FC5DBD /* GameDetailViewController.swift */; };
+		048DE4CE2160F1BF00FC5DBD /* GameDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4CD2160F1BF00FC5DBD /* GameDetailViewController.xib */; };
+		048DE4D12160F7A700FC5DBD /* ConsoleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4D02160F7A700FC5DBD /* ConsoleDetailViewController.xib */; };
+		048DE4D42160F7DE00FC5DBD /* ConsoleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4D32160F7DE00FC5DBD /* ConsoleDetailViewController.swift */; };
+		048DE4D72160F83C00FC5DBD /* LoadNibUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4D62160F83C00FC5DBD /* LoadNibUtils.swift */; };
+		048DE4DA2160FA9E00FC5DBD /* GameFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4D92160FA9E00FC5DBD /* GameFormViewController.swift */; };
+		048DE4DD2160FABB00FC5DBD /* GameFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4DC2160FABB00FC5DBD /* GameFormViewController.xib */; };
+		048DE4E12160FB2800FC5DBD /* ConsoleFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4E02160FB2800FC5DBD /* ConsoleFormViewController.xib */; };
+		048DE4E32160FB3900FC5DBD /* ConsoleFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4E22160FB3900FC5DBD /* ConsoleFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +60,16 @@
 		048DE4BF2160EB3600FC5DBD /* BaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseTableViewCell.xib; sourceTree = "<group>"; };
 		048DE4C22160EC1000FC5DBD /* CellDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDto.swift; sourceTree = "<group>"; };
 		048DE4C52160EF1400FC5DBD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		048DE4C82160F0A500FC5DBD /* BaseTableViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewContract.swift; sourceTree = "<group>"; };
+		048DE4CA2160F14B00FC5DBD /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		048DE4CD2160F1BF00FC5DBD /* GameDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameDetailViewController.xib; sourceTree = "<group>"; };
+		048DE4D02160F7A700FC5DBD /* ConsoleDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsoleDetailViewController.xib; sourceTree = "<group>"; };
+		048DE4D32160F7DE00FC5DBD /* ConsoleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleDetailViewController.swift; sourceTree = "<group>"; };
+		048DE4D62160F83C00FC5DBD /* LoadNibUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNibUtils.swift; sourceTree = "<group>"; };
+		048DE4D92160FA9E00FC5DBD /* GameFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFormViewController.swift; sourceTree = "<group>"; };
+		048DE4DC2160FABB00FC5DBD /* GameFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameFormViewController.xib; sourceTree = "<group>"; };
+		048DE4E02160FB2800FC5DBD /* ConsoleFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsoleFormViewController.xib; sourceTree = "<group>"; };
+		048DE4E22160FB3900FC5DBD /* ConsoleFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +159,11 @@
 			isa = PBXGroup;
 			children = (
 				048DE4B22160E99F00FC5DBD /* Games */,
+				048DE4D82160FA8900FC5DBD /* GameForm */,
+				048DE4C72160F07100FC5DBD /* GameDetail */,
 				048DE4B52160EA6400FC5DBD /* Consoles */,
+				048DE4DE2160FB0800FC5DBD /* ConsoleForm */,
+				048DE4CF2160F78900FC5DBD /* ConsoleDetail */,
 				048DE4B82160EAD200FC5DBD /* Common */,
 			);
 			path = Modules;
@@ -166,6 +190,7 @@
 			children = (
 				048DE4C42160EF0900FC5DBD /* ViewController */,
 				048DE4B92160EAE100FC5DBD /* TableView */,
+				048DE4D62160F83C00FC5DBD /* LoadNibUtils.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -176,6 +201,7 @@
 				048DE4C12160EBFF00FC5DBD /* Dto */,
 				048DE4BC2160EB2000FC5DBD /* Cell */,
 				048DE4BA2160EAEE00FC5DBD /* BaseTableView.swift */,
+				048DE4C82160F0A500FC5DBD /* BaseTableViewContract.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -203,6 +229,74 @@
 				048DE4C52160EF1400FC5DBD /* BaseViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		048DE4C72160F07100FC5DBD /* GameDetail */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4CC2160F1AA00FC5DBD /* View */,
+				048DE4CA2160F14B00FC5DBD /* GameDetailViewController.swift */,
+			);
+			path = GameDetail;
+			sourceTree = "<group>";
+		};
+		048DE4CC2160F1AA00FC5DBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4CD2160F1BF00FC5DBD /* GameDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		048DE4CF2160F78900FC5DBD /* ConsoleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4D22160F7CD00FC5DBD /* View */,
+				048DE4D32160F7DE00FC5DBD /* ConsoleDetailViewController.swift */,
+			);
+			path = ConsoleDetail;
+			sourceTree = "<group>";
+		};
+		048DE4D22160F7CD00FC5DBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4D02160F7A700FC5DBD /* ConsoleDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		048DE4D82160FA8900FC5DBD /* GameForm */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4DB2160FAA300FC5DBD /* View */,
+				048DE4D92160FA9E00FC5DBD /* GameFormViewController.swift */,
+			);
+			path = GameForm;
+			sourceTree = "<group>";
+		};
+		048DE4DB2160FAA300FC5DBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4DC2160FABB00FC5DBD /* GameFormViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		048DE4DE2160FB0800FC5DBD /* ConsoleForm */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4DF2160FB1400FC5DBD /* View */,
+				048DE4E22160FB3900FC5DBD /* ConsoleFormViewController.swift */,
+			);
+			path = ConsoleForm;
+			sourceTree = "<group>";
+		};
+		048DE4DF2160FB1400FC5DBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4E02160FB2800FC5DBD /* ConsoleFormViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +382,11 @@
 			files = (
 				048DE4C02160EB3600FC5DBD /* BaseTableViewCell.xib in Resources */,
 				048DE4992160DF7600FC5DBD /* LaunchScreen.storyboard in Resources */,
+				048DE4DD2160FABB00FC5DBD /* GameFormViewController.xib in Resources */,
 				048DE4962160DF7600FC5DBD /* Assets.xcassets in Resources */,
+				048DE4E12160FB2800FC5DBD /* ConsoleFormViewController.xib in Resources */,
+				048DE4CE2160F1BF00FC5DBD /* GameDetailViewController.xib in Resources */,
+				048DE4D12160F7A700FC5DBD /* ConsoleDetailViewController.xib in Resources */,
 				048DE4942160DF7500FC5DBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,12 +405,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048DE4D42160F7DE00FC5DBD /* ConsoleDetailViewController.swift in Sources */,
 				048DE4B72160EA7300FC5DBD /* ConsolesViewController.swift in Sources */,
+				048DE4DA2160FA9E00FC5DBD /* GameFormViewController.swift in Sources */,
+				048DE4CB2160F14B00FC5DBD /* GameDetailViewController.swift in Sources */,
+				048DE4D72160F83C00FC5DBD /* LoadNibUtils.swift in Sources */,
 				048DE4912160DF7500FC5DBD /* ViewController.swift in Sources */,
 				048DE4B42160E9AF00FC5DBD /* GamesViewController.swift in Sources */,
 				048DE48F2160DF7500FC5DBD /* AppDelegate.swift in Sources */,
 				048DE4BE2160EB2B00FC5DBD /* BaseTableViewCell.swift in Sources */,
 				048DE4C62160EF1400FC5DBD /* BaseViewController.swift in Sources */,
+				048DE4E32160FB3900FC5DBD /* ConsoleFormViewController.swift in Sources */,
+				048DE4C92160F0A500FC5DBD /* BaseTableViewContract.swift in Sources */,
 				048DE4BB2160EAEE00FC5DBD /* BaseTableView.swift in Sources */,
 				048DE4C32160EC1000FC5DBD /* CellDto.swift in Sources */,
 			);

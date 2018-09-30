@@ -29,10 +29,31 @@ class GamesViewController: BaseViewController {
             CellDto(title: "abc", subtitle: "adw"),
             CellDto(title: "abc", subtitle: "adw"),
             CellDto(title: "abc", subtitle: "adw")
-            ])                                
+            ], contract: self)
     }
     
     override func setupSearchBar() {
         
+    }
+    
+    override func didAddTapped() {
+        let formViewController: GameFormViewController =
+            loadNibNamed(GameFormViewController.NIB_NAME,
+                         owner: self) ?? GameFormViewController()
+        
+        navigationController?.pushViewController(formViewController,
+                                                 animated: true)
+    }
+}
+
+extension GamesViewController: BaseTableViewContract {
+    
+    func didCellSelected() {
+        let detailViewController: GameDetailViewController =
+            loadNibNamed(GameDetailViewController.NIB_NAME,
+                         owner: self) ?? GameDetailViewController()
+        
+        navigationController?.pushViewController(detailViewController,
+                                                 animated: true)        
     }
 }

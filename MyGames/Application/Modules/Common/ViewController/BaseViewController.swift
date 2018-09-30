@@ -17,11 +17,19 @@ public class BaseViewController: UIViewController {
     
     func setupNavigationController() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem =
+            UIBarButtonItem(barButtonSystemItem: .add,
+                            target: self,
+                            action: #selector(didAddTapped))
         setupSearchBar()
     }
     
     func setupSearchBar() {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
+    }
+    
+    @objc func didAddTapped() {
+        
     }
 }
