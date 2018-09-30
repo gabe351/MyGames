@@ -36,12 +36,11 @@ class ConsoleFormViewController: UIViewController {
     }
     
     @objc func didSaveTapped() {
-        //        If save success
-        let console = Console(guid: guid,
-                              title: "",
-                              manufacturer: "")
+        let consoleToBeSaved = Console(guid: guid,
+                                       title: "",
+                                       manufacturer: "")
         
-        presenter.save(console: console)
+        presenter.save(console: consoleToBeSaved)
         navigationController?.popViewController(animated: true)
     }
 }
@@ -52,9 +51,5 @@ extension ConsoleFormViewController: ConsoleFormViewContract {
             guid = currentConsole.guid
             //            fill all fields
         }
-    }
-    
-    func save(console: Console) {
-        
     }
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		042478252161666B004D121F /* ConsoleFormContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042478242161666B004D121F /* ConsoleFormContracts.swift */; };
 		04247827216166E7004D121F /* ConsoleFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04247826216166E7004D121F /* ConsoleFormPresenter.swift */; };
+		042478292161699D004D121F /* GameFormContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042478282161699D004D121F /* GameFormContracts.swift */; };
+		0424782B216169EA004D121F /* GabeFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424782A216169EA004D121F /* GabeFormPresenter.swift */; };
 		0478723F216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478723E216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift */; };
 		0478724221612AC50019F75F /* InjectionLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724121612AC50019F75F /* InjectionLocalDataSource.swift */; };
 		0478724421612B610019F75F /* GamesContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724321612B610019F75F /* GamesContracts.swift */; };
@@ -76,6 +78,8 @@
 /* Begin PBXFileReference section */
 		042478242161666B004D121F /* ConsoleFormContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleFormContracts.swift; sourceTree = "<group>"; };
 		04247826216166E7004D121F /* ConsoleFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleFormPresenter.swift; sourceTree = "<group>"; };
+		042478282161699D004D121F /* GameFormContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFormContracts.swift; sourceTree = "<group>"; };
+		0424782A216169EA004D121F /* GabeFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GabeFormPresenter.swift; sourceTree = "<group>"; };
 		0478723E216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		0478724121612AC50019F75F /* InjectionLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionLocalDataSource.swift; sourceTree = "<group>"; };
 		0478724321612B610019F75F /* GamesContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesContracts.swift; sourceTree = "<group>"; };
@@ -390,6 +394,8 @@
 				0478724E2161300A0019F75F /* UseCase */,
 				048DE4DB2160FAA300FC5DBD /* View */,
 				048DE4D92160FA9E00FC5DBD /* GameFormViewController.swift */,
+				042478282161699D004D121F /* GameFormContracts.swift */,
+				0424782A216169EA004D121F /* GabeFormPresenter.swift */,
 			);
 			path = GameForm;
 			sourceTree = "<group>";
@@ -727,6 +733,7 @@
 				048DE4CB2160F14B00FC5DBD /* GameDetailViewController.swift in Sources */,
 				048DE4D72160F83C00FC5DBD /* LoadNibUtils.swift in Sources */,
 				048DE4B42160E9AF00FC5DBD /* GamesViewController.swift in Sources */,
+				0424782B216169EA004D121F /* GabeFormPresenter.swift in Sources */,
 				047872532161305E0019F75F /* SaveConsole.swift in Sources */,
 				04BACD63216150AD00077F6E /* GameDetailPresenter.swift in Sources */,
 				048DE48F2160DF7500FC5DBD /* AppDelegate.swift in Sources */,
@@ -736,6 +743,7 @@
 				04FDA7E621610C8D007E20BD /* ConsoleConverter.swift in Sources */,
 				048DE4C62160EF1400FC5DBD /* BaseViewController.swift in Sources */,
 				04FDA7E221610949007E20BD /* GameEntry.swift in Sources */,
+				042478292161699D004D121F /* GameFormContracts.swift in Sources */,
 				04FDA7EA21610E86007E20BD /* ConsoleLocalDataSource.swift in Sources */,
 				04FDA7DB21610814007E20BD /* Console.swift in Sources */,
 				04247827216166E7004D121F /* ConsoleFormPresenter.swift in Sources */,

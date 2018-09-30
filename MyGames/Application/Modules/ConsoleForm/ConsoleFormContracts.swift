@@ -9,12 +9,9 @@
 import Foundation
 
 protocol ConsoleFormViewContract: class {
-    
     func setCurrentConsole()
-    func save(console: Console)
 }
 
-protocol ConsoleFormPresenterContract {
-    
+protocol ConsoleFormPresenterContract {    
     func save(console: Console)
 }

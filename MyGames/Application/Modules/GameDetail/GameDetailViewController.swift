@@ -32,6 +32,7 @@ class GameDetailViewController: UIViewController {
     }()
     
     var guid = ""
+    var game: Game?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class GameDetailViewController: UIViewController {
         let formViewController: GameFormViewController =
             loadNibNamed(GameFormViewController.NIB_NAME,
                          owner: self) ?? GameFormViewController()
-        
+        formViewController.game = game
         navigationController?.pushViewController(formViewController,
                                                  animated: true)
     }
@@ -75,6 +76,7 @@ class GameDetailViewController: UIViewController {
 extension GameDetailViewController: GameDetailViewContract {
     
     func show(game: Game) {
+        self.game                = game
         tiitleLabel.text         = game.title
         yearLabel.text           = game.year
         consoleLabel.text        = game.console
