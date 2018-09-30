@@ -20,14 +20,15 @@ class GamesPresenter: GamesPresenterContract {
     }
     
     func loadGames() {
-        let games = getGames.allGames()
+        let games = getGames.all()
         view?.show(games: convertGameToCellDto(games: games))
     }
     
     private func convertGameToCellDto(games: [Game]) -> [CellDto] {
         
         let cells = games.map { game -> CellDto in
-            CellDto(title: game.title,
+            CellDto(guid: game.guid,
+                    title: game.title,
                     subtitle: game.releasedAt)
         }
         

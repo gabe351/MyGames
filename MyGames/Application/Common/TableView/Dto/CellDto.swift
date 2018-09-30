@@ -9,7 +9,7 @@
 import Foundation
 
 public struct CellDto {
-    
+    let guid: String
     let title: String
     let subtitle: String    
 }

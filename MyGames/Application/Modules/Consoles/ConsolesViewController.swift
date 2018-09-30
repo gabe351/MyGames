@@ -12,6 +12,11 @@ class ConsolesViewController: BaseViewController {
     
     @IBOutlet weak var consolesTableView: BaseTableView!
     
+    lazy var presenter: ConsolesPresenterContract = {
+        return ConsolesPresenter(view: self,
+                                 getConsoles: InjectionUseCase.provideGetGames())
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,21 +24,6 @@ class ConsolesViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        consolesTableView.set(elements: [
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw")
-            ], contract: self)
     }
             
     override func didAddTapped() {
@@ -43,6 +33,14 @@ class ConsolesViewController: BaseViewController {
         
         navigationController?.pushViewController(formViewController,
                                                  animated: true)        
+    }
+}
+
+extension ConsolesViewController: ConsolesViewContract {
+    
+    func show(consoles: [CellDto]) {
+        consolesTableView.set(elements: consoles,
+                              contract: self)
     }
 }
 

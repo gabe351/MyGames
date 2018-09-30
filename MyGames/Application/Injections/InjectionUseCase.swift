@@ -10,10 +10,33 @@ import Foundation
 
 class InjectionUseCase {
     
+    static let gameLocalDataSource = InjectionLocalDataSource
+        .provideGameLocalDataSource()
+    
+    static let consolelocalDataSource = InjectionLocalDataSource
+        .provideConsoleLocalDataSource()
+    
     static func provideGetGames() -> GetGames {
-        let localDataSource = InjectionLocalDataSource
-            .provideGameLocalDataSource()
-        
-        return GetGames(localDataSource: localDataSource)
-    }    
+        return GetGames(localDataSource: gameLocalDataSource)
+    }
+    
+    static func provideGetConsoles() -> GetConsoles {
+        return GetConsoles(localDataSource: consolelocalDataSource)
+    }
+    
+    static func provideSaveGame() -> SaveGame {
+        return SaveGame(localDataSource: gameLocalDataSource)
+    }
+    
+    static func provideSaveConsole() -> SaveConsole {
+        return SaveConsole(localDataSource: consolelocalDataSource)
+    }
+    
+    static func provideDeleteGame() -> DeleteGame {
+        return DeleteGame(localDataSource: gameLocalDataSource)
+    }
+    
+    static func provideDeleteConsole() -> DeleteConsole {
+        return DeleteConsole(localDataSource: consolelocalDataSource)
+    }
 }

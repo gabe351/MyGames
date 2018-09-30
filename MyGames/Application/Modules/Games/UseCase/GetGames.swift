@@ -16,7 +16,7 @@ class GetGames {
         self.localDataSource = localDataSource
     }
     
-    func allGames() -> [Game] {
+    func all() -> [Game] {
         guard let foundGames = localDataSource?.allGames() else {
             return []
         }

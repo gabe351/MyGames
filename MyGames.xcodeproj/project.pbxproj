@@ -17,6 +17,11 @@
 		04787250216130150019F75F /* SaveGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724F216130150019F75F /* SaveGame.swift */; };
 		047872532161305E0019F75F /* SaveConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047872522161305E0019F75F /* SaveConsole.swift */; };
 		047872552161325D0019F75F /* GuidGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047872542161325D0019F75F /* GuidGenerator.swift */; };
+		04787258216136C90019F75F /* GetConsoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04787257216136C90019F75F /* GetConsoles.swift */; };
+		0478725A216137400019F75F /* ConsolesContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04787259216137400019F75F /* ConsolesContracts.swift */; };
+		0478725C216138200019F75F /* ConsolesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478725B216138200019F75F /* ConsolesPresenter.swift */; };
+		0478725E2161398B0019F75F /* DeleteGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478725D2161398B0019F75F /* DeleteGame.swift */; };
+		04787260216139C10019F75F /* DeleteConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478725F216139C10019F75F /* DeleteConsole.swift */; };
 		048DE48F2160DF7500FC5DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE48E2160DF7500FC5DBD /* AppDelegate.swift */; };
 		048DE4912160DF7500FC5DBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4902160DF7500FC5DBD /* ViewController.swift */; };
 		048DE4942160DF7500FC5DBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4922160DF7500FC5DBD /* Main.storyboard */; };
@@ -74,6 +79,11 @@
 		0478724F216130150019F75F /* SaveGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGame.swift; sourceTree = "<group>"; };
 		047872522161305E0019F75F /* SaveConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveConsole.swift; sourceTree = "<group>"; };
 		047872542161325D0019F75F /* GuidGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidGenerator.swift; sourceTree = "<group>"; };
+		04787257216136C90019F75F /* GetConsoles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConsoles.swift; sourceTree = "<group>"; };
+		04787259216137400019F75F /* ConsolesContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolesContracts.swift; sourceTree = "<group>"; };
+		0478725B216138200019F75F /* ConsolesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsolesPresenter.swift; sourceTree = "<group>"; };
+		0478725D2161398B0019F75F /* DeleteGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGame.swift; sourceTree = "<group>"; };
+		0478725F216139C10019F75F /* DeleteConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteConsole.swift; sourceTree = "<group>"; };
 		048DE48B2160DF7500FC5DBD /* MyGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048DE48E2160DF7500FC5DBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048DE4902160DF7500FC5DBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				0478724621612BD80019F75F /* GetGames.swift */,
+				0478725D2161398B0019F75F /* DeleteGame.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -167,6 +178,15 @@
 			isa = PBXGroup;
 			children = (
 				047872522161305E0019F75F /* SaveConsole.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		04787256216136C10019F75F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				04787257216136C90019F75F /* GetConsoles.swift */,
+				0478725F216139C10019F75F /* DeleteConsole.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -262,7 +282,10 @@
 		048DE4B52160EA6400FC5DBD /* Consoles */ = {
 			isa = PBXGroup;
 			children = (
+				04787256216136C10019F75F /* UseCase */,
 				048DE4B62160EA7300FC5DBD /* ConsolesViewController.swift */,
+				0478725B216138200019F75F /* ConsolesPresenter.swift */,
+				04787259216137400019F75F /* ConsolesContracts.swift */,
 			);
 			path = Consoles;
 			sourceTree = "<group>";
@@ -677,6 +700,7 @@
 				04FDA7E4216109D8007E20BD /* ConsoleEntry.swift in Sources */,
 				048DE4D42160F7DE00FC5DBD /* ConsoleDetailViewController.swift in Sources */,
 				04FDA7D92161080D007E20BD /* Game.swift in Sources */,
+				04787258216136C90019F75F /* GetConsoles.swift in Sources */,
 				0478724D21612F9B0019F75F /* MyGamesApplication.swift in Sources */,
 				048DE4B72160EA7300FC5DBD /* ConsolesViewController.swift in Sources */,
 				0478723F216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift in Sources */,
@@ -698,13 +722,17 @@
 				04FDA7E221610949007E20BD /* GameEntry.swift in Sources */,
 				04FDA7EA21610E86007E20BD /* ConsoleLocalDataSource.swift in Sources */,
 				04FDA7DB21610814007E20BD /* Console.swift in Sources */,
+				0478725E2161398B0019F75F /* DeleteGame.swift in Sources */,
 				04FDA7EC21610EB6007E20BD /* GameLocalDataSourceImpl.swift in Sources */,
 				048DE4E32160FB3900FC5DBD /* ConsoleFormViewController.swift in Sources */,
 				048DE4C92160F0A500FC5DBD /* BaseTableViewContract.swift in Sources */,
 				04787250216130150019F75F /* SaveGame.swift in Sources */,
 				0478724421612B610019F75F /* GamesContracts.swift in Sources */,
 				0478724721612BD80019F75F /* GetGames.swift in Sources */,
+				0478725C216138200019F75F /* ConsolesPresenter.swift in Sources */,
 				048DE4BB2160EAEE00FC5DBD /* BaseTableView.swift in Sources */,
+				0478725A216137400019F75F /* ConsolesContracts.swift in Sources */,
+				04787260216139C10019F75F /* DeleteConsole.swift in Sources */,
 				048DE4C32160EC1000FC5DBD /* CellDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
