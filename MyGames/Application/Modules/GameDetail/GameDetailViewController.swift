@@ -10,6 +10,20 @@ import UIKit
 
 class GameDetailViewController: UIViewController {
     
+    
+    @IBOutlet weak var titlePlaceholderLabel: UILabel!
+    @IBOutlet weak var tiitleLabel: UILabel!
+    @IBOutlet weak var yearPlaceholderLabel: UILabel!
+    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var consolePlaceholderLabel: UILabel!
+    @IBOutlet weak var consoleLabel: UILabel!
+    @IBOutlet weak var completedPlaceholderLabel: UILabel!
+    @IBOutlet weak var completedLabel: UILabel!
+    @IBOutlet weak var completionDatePlaceholderLabel: UILabel!
+    @IBOutlet weak var completionDateLabel: UILabel!
+    @IBOutlet weak var notesPlaceholderLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    
     public static let NIB_NAME = "GameDetailViewController"
     
     lazy var presenter: GameDetailPresenterContract = {
@@ -27,6 +41,7 @@ class GameDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.loadGameBy(guid: guid)
+        setupPlacehoderLabels()
     }
     
     @objc func didUpdateTapped() {
@@ -46,12 +61,34 @@ class GameDetailViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.title = "Game Detail"
     }
+    
+    private func setupPlacehoderLabels() {
+        titlePlaceholderLabel.text          = "Title: "
+        yearPlaceholderLabel.text           = "Game year: "
+        consolePlaceholderLabel.text        = "Console: "
+        completedPlaceholderLabel.text      = "Completed: "
+        completionDatePlaceholderLabel.text = "Completed at: "
+        notesPlaceholderLabel.text          = "Personal Notes:"
+    }
 }
 
 extension GameDetailViewController: GameDetailViewContract {
     
     func show(game: Game) {
-        print(game.title)
-        //        TODO: Setup outlets
+        tiitleLabel.text         = game.title
+        yearLabel.text           = game.year
+        consoleLabel.text        = game.console
+        notesLabel.text          = game.personalNotes
+        completedLabel.text      = getCompleted(game.completed)
+        //TODO: update date utils
+        completionDateLabel.text = "\(game.dateOfCompletion)"
+        
+    }
+    
+    private func getCompleted(_ isCompleted: Bool) -> String {
+        if isCompleted { return "Yes" }
+        
+        return "No"
     }
 }
+
