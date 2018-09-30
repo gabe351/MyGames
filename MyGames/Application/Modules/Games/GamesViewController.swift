@@ -18,6 +18,10 @@ class GamesViewController: BaseViewController {
                               deleteGame: InjectionUseCase.provideDeleteGame())
     }()
     
+    var filteredGames    = [CellDto]()
+    var games            = [CellDto]()
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,6 +29,19 @@ class GamesViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.loadGames()
+        gamesTableView.contract = self
+    }
+    
+    override func setupSearchBar() {
+        
+        definesPresentationContext = true
+        
+        searchController.searchResultsUpdater                 = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder                = "Search Games"
+        
+        navigationItem.searchController            = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
             
     override func didAddTapped() {
@@ -37,11 +54,35 @@ class GamesViewController: BaseViewController {
     }
 }
 
+extension GamesViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredGames = games.filter({( game : CellDto) -> Bool in
+            return game.title.lowercased().contains(searchText.lowercased())
+            || game.extra.lowercased().contains(searchText.lowercased())
+        })
+        
+        gamesTableView.set(elements: filteredGames)
+        
+        if searchBarIsEmpty() {
+            gamesTableView.set(elements: games)
+        }
+    }
+}
+
 extension GamesViewController: GamesViewContract {
     
     func show(games: [CellDto]) {
-        gamesTableView.set(elements: games,
-                           contract: self)
+        self.games = games
+        gamesTableView.set(elements: games)
     }
     
     func destroyBy(guid: String) {

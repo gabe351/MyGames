@@ -11,5 +11,6 @@ import Foundation
 public struct CellDto {
     let guid: String
     let title: String
-    let subtitle: String    
+    let subtitle: String
+    let extra: String
 }

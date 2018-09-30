@@ -18,6 +18,10 @@ class ConsolesViewController: BaseViewController {
                                  deleteConsole: InjectionUseCase.provideDeleteConsole())
     }()
     
+    var filteredConsoles = [CellDto]()
+    var consoles         = [CellDto]()
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,6 +29,19 @@ class ConsolesViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.loadConsoles()
+        consolesTableView.contract = self
+    }
+    
+    override func setupSearchBar() {
+        
+        definesPresentationContext = true
+        
+        searchController.searchResultsUpdater                 = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder                = "Search Games"
+        
+        navigationItem.searchController            = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
             
     override func didAddTapped() {
@@ -37,11 +54,34 @@ class ConsolesViewController: BaseViewController {
     }
 }
 
+extension ConsolesViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredConsoles = consoles.filter({( console : CellDto) -> Bool in
+            return console.title.lowercased().contains(searchText.lowercased())
+        })
+        
+        consolesTableView.set(elements: filteredConsoles)
+        
+        if searchBarIsEmpty() {
+            consolesTableView.set(elements: consoles)
+        }
+    }
+}
+
 extension ConsolesViewController: ConsolesViewContract {
     
     func show(consoles: [CellDto]) {
-        consolesTableView.set(elements: consoles,
-                              contract: self)
+        self.consoles = consoles
+        consolesTableView.set(elements: consoles)
     }
     
     func destroyBy(guid: String) {

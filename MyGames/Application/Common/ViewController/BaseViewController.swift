@@ -24,13 +24,7 @@ public class BaseViewController: UIViewController {
         setupSearchBar()
     }
     
-    func setupSearchBar() {
-        let searchController = UISearchController(searchResultsController: nil)
-        navigationItem.searchController            = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-    }
+    func setupSearchBar() { }
     
-    @objc func didAddTapped() {
-        
-    }
+    @objc func didAddTapped() { }
 }

@@ -23,9 +23,8 @@ class BaseTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         self.register(cell, forCellReuseIdentifier: BaseTableViewCell.IDENTIFIER)
     }
     
-    func set(elements: [CellDto], contract: BaseTableViewContract) {
-        self.cellDtos = elements
-        self.contract = contract
+    func set(elements: [CellDto]) {
+        self.cellDtos = elements        
         reloadData()
     }
     

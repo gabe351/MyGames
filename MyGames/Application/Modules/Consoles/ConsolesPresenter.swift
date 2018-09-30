@@ -32,7 +32,8 @@ class ConsolesPresenter: ConsolesPresenterContract {
         let cells = consoles.map { console -> CellDto in
             CellDto(guid: console.guid,
                     title: console.title,
-                    subtitle: console.manufacturer)
+                    subtitle: console.manufacturer,
+                    extra: "")
         }
         
         return cells

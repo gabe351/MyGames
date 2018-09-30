@@ -29,10 +29,11 @@ class GamesPresenter: GamesPresenterContract {
     
     private func convertGameToCellDto(games: [Game]) -> [CellDto] {
         
-        let cells = games.map { game -> CellDto in
+        let cells = games.map { game -> CellDto in            
             CellDto(guid: game.guid,
                     title: game.title,
-                    subtitle: game.releasedAt)
+                    subtitle: "\(game.console) - \(game.releasedAt)",
+                    extra: game.console)
         }
         
         return cells
