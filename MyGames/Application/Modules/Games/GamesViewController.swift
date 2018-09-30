@@ -31,11 +31,7 @@ class GamesViewController: BaseViewController {
             CellDto(title: "abc", subtitle: "adw")
             ], contract: self)
     }
-    
-    override func setupSearchBar() {
-        
-    }
-    
+            
     override func didAddTapped() {
         let formViewController: GameFormViewController =
             loadNibNamed(GameFormViewController.NIB_NAME,

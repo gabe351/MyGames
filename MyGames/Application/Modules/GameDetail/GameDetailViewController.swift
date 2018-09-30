@@ -19,6 +19,7 @@ class GameDetailViewController: UIViewController {
             UIBarButtonItem(barButtonSystemItem: .edit,
                             target: self,
                             action: #selector(didUpdateTapped))
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     @objc func didUpdateTapped() {

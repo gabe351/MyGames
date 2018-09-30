@@ -35,11 +35,7 @@ class ConsolesViewController: BaseViewController {
             CellDto(title: "abc", subtitle: "adw")
             ], contract: self)
     }
-    
-    override func setupSearchBar() {
-        
-    }
-    
+            
     override func didAddTapped() {
         let formViewController: ConsoleFormViewController =
             loadNibNamed(ConsoleFormViewController.NIB_NAME,

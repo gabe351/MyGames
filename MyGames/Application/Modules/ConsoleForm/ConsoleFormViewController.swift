@@ -19,6 +19,7 @@ class ConsoleFormViewController: UIViewController {
             UIBarButtonItem(barButtonSystemItem: .save,
                             target: self,
                             action: #selector(didSaveTapped))
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     @objc func didSaveTapped() {
