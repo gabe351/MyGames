@@ -92,10 +92,11 @@ extension GamesViewController: GamesViewContract {
 
 extension GamesViewController: BaseTableViewContract {
     
-    func didCellSelected() {
+    func didCellSelected(guid: String) {
         let detailViewController: GameDetailViewController =
             loadNibNamed(GameDetailViewController.NIB_NAME,
                          owner: self) ?? GameDetailViewController()
+        detailViewController.guid = guid
         
         navigationController?.pushViewController(detailViewController,
                                                  animated: true)        

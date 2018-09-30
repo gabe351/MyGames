@@ -42,7 +42,7 @@ class BaseTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        contract?.didCellSelected()
+        contract?.didCellSelected(guid: cellDtos[indexPath.row].guid)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

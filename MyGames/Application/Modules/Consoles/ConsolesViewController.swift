@@ -91,7 +91,7 @@ extension ConsolesViewController: ConsolesViewContract {
 
 extension ConsolesViewController: BaseTableViewContract {
     
-    func didCellSelected() {
+    func didCellSelected(guid: String) {
         let detailViewController: ConsoleDetailViewController =
             loadNibNamed(ConsoleDetailViewController.NIB_NAME,
                          owner: self) ?? ConsoleDetailViewController()

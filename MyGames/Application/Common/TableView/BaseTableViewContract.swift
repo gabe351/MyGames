@@ -9,6 +9,6 @@
 import Foundation
 
 protocol BaseTableViewContract: class {
-    func didCellSelected()
+    func didCellSelected(guid: String)
     func destroyBy(guid: String)
 }
