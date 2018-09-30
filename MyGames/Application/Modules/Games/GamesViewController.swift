@@ -8,12 +8,31 @@
 
 import UIKit
 
-class GamesViewController: UIViewController {
+class GamesViewController: BaseViewController {
+    
+    @IBOutlet weak var gamesTableView: BaseTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.prefersLargeTitles = true                
+        gamesTableView.set(elements: [
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw")
+            ])                                
     }
     
+    override func setupSearchBar() {
+        
+    }
 }

@@ -18,6 +18,8 @@
 		048DE4BB2160EAEE00FC5DBD /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4BA2160EAEE00FC5DBD /* BaseTableView.swift */; };
 		048DE4BE2160EB2B00FC5DBD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4BD2160EB2B00FC5DBD /* BaseTableViewCell.swift */; };
 		048DE4C02160EB3600FC5DBD /* BaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4BF2160EB3600FC5DBD /* BaseTableViewCell.xib */; };
+		048DE4C32160EC1000FC5DBD /* CellDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4C22160EC1000FC5DBD /* CellDto.swift */; };
+		048DE4C62160EF1400FC5DBD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4C52160EF1400FC5DBD /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		048DE4BA2160EAEE00FC5DBD /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
 		048DE4BD2160EB2B00FC5DBD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		048DE4BF2160EB3600FC5DBD /* BaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseTableViewCell.xib; sourceTree = "<group>"; };
+		048DE4C22160EC1000FC5DBD /* CellDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDto.swift; sourceTree = "<group>"; };
+		048DE4C52160EF1400FC5DBD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 		048DE4B82160EAD200FC5DBD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				048DE4C42160EF0900FC5DBD /* ViewController */,
 				048DE4B92160EAE100FC5DBD /* TableView */,
 			);
 			path = Common;
@@ -168,6 +173,7 @@
 		048DE4B92160EAE100FC5DBD /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				048DE4C12160EBFF00FC5DBD /* Dto */,
 				048DE4BC2160EB2000FC5DBD /* Cell */,
 				048DE4BA2160EAEE00FC5DBD /* BaseTableView.swift */,
 			);
@@ -181,6 +187,22 @@
 				048DE4BF2160EB3600FC5DBD /* BaseTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		048DE4C12160EBFF00FC5DBD /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4C22160EC1000FC5DBD /* CellDto.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		048DE4C42160EF0900FC5DBD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				048DE4C52160EF1400FC5DBD /* BaseViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +312,9 @@
 				048DE4B42160E9AF00FC5DBD /* GamesViewController.swift in Sources */,
 				048DE48F2160DF7500FC5DBD /* AppDelegate.swift in Sources */,
 				048DE4BE2160EB2B00FC5DBD /* BaseTableViewCell.swift in Sources */,
+				048DE4C62160EF1400FC5DBD /* BaseViewController.swift in Sources */,
 				048DE4BB2160EAEE00FC5DBD /* BaseTableView.swift in Sources */,
+				048DE4C32160EC1000FC5DBD /* CellDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

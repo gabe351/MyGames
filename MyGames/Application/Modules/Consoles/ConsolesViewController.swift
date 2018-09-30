@@ -8,13 +8,35 @@
 
 import UIKit
 
-class ConsolesViewController: UIViewController {
+class ConsolesViewController: BaseViewController {
     
+    @IBOutlet weak var consolesTableView: BaseTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        consolesTableView.set(elements: [
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw"),
+            CellDto(title: "abc", subtitle: "adw")
+            ])
+    }
+    
+    override func setupSearchBar() {
+        
+    }
 }

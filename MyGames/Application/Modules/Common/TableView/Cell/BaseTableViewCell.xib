@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="BU8-uv-50d" detailTextLabel="A9z-s3-hN6" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="V4v-sX-8Va" customClass="BaseTableViewCell" customModule="MyGames" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BaseTableViewCellIdentifier" textLabel="BU8-uv-50d" detailTextLabel="A9z-s3-hN6" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="V4v-sX-8Va" customClass="BaseTableViewCell" customModule="MyGames" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V4v-sX-8Va" id="Xja-90-Q8W">
@@ -33,6 +33,10 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="subtitleLabel" destination="A9z-s3-hN6" id="pd5-PU-dkk"/>
+                <outlet property="titleLabel" destination="BU8-uv-50d" id="BiO-p0-2NS"/>
+            </connections>
             <point key="canvasLocation" x="61.600000000000001" y="80.959520239880064"/>
         </tableViewCell>
     </objects>
