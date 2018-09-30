@@ -12,11 +12,14 @@ class ConsolesPresenter: ConsolesPresenterContract {
     
     private weak var view: ConsolesViewContract?
     private let getConsoles: GetConsoles
+    private let deleteConsole: DeleteConsole
     
     init(view: ConsolesViewContract,
-         getConsoles: GetConsoles) {
-        self.view        = view
-        self.getConsoles = getConsoles
+         getConsoles: GetConsoles,
+         deleteConsole: DeleteConsole) {
+        self.view          = view
+        self.getConsoles   = getConsoles
+        self.deleteConsole = deleteConsole
     }
     
     func loadConsoles() {
@@ -33,5 +36,9 @@ class ConsolesPresenter: ConsolesPresenterContract {
         }
         
         return cells
-    }    
+    }
+    
+    func destroyBy(guid: String) {
+        deleteConsole.destroyBy(guid: guid)
+    }
 }

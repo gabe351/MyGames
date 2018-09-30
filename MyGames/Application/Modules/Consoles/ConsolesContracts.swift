@@ -10,8 +10,10 @@ import Foundation
 
 protocol ConsolesViewContract: class {
     func show(consoles: [CellDto])
+    func destroyBy(guid: String)
 }
 
 protocol ConsolesPresenterContract: class {
     func loadConsoles()
+    func destroyBy(guid: String)
 }

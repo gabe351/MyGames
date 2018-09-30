@@ -14,7 +14,8 @@ class ConsolesViewController: BaseViewController {
     
     lazy var presenter: ConsolesPresenterContract = {
         return ConsolesPresenter(view: self,
-                                 getConsoles: InjectionUseCase.provideGetGames())
+                                 getConsoles: InjectionUseCase.provideGetConsoles(),
+                                 deleteConsole: InjectionUseCase.provideDeleteConsole())
     }()
     
     override func viewDidLoad() {
@@ -23,7 +24,7 @@ class ConsolesViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        presenter.loadConsoles()
     }
             
     override func didAddTapped() {
@@ -41,6 +42,10 @@ extension ConsolesViewController: ConsolesViewContract {
     func show(consoles: [CellDto]) {
         consolesTableView.set(elements: consoles,
                               contract: self)
+    }
+    
+    func destroyBy(guid: String) {
+        presenter.destroyBy(guid: guid)
     }
 }
 

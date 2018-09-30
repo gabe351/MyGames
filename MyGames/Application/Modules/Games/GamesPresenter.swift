@@ -12,11 +12,14 @@ class GamesPresenter: GamesPresenterContract {
     
     private weak var view: GamesViewContract?
     private let getGames: GetGames
+    private let deleteGame: DeleteGame
     
     init(view: GamesViewContract,
-         getGames: GetGames) {
-        self.view     = view
-        self.getGames = getGames
+         getGames: GetGames,
+         deleteGame: DeleteGame) {
+        self.view       = view
+        self.getGames   = getGames
+        self.deleteGame = deleteGame
     }
     
     func loadGames() {
@@ -33,5 +36,9 @@ class GamesPresenter: GamesPresenterContract {
         }
         
         return cells
+    }
+    
+    func destroyBy(guid: String) {
+        deleteGame.destroyBy(guid: guid)
     }
 }

@@ -14,7 +14,8 @@ class GamesViewController: BaseViewController {
     
     lazy var presenter: GamesPresenterContract = {
         return GamesPresenter(view: self,
-                              getGames: InjectionUseCase.provideGetGames())
+                              getGames: InjectionUseCase.provideGetGames(),
+                              deleteGame: InjectionUseCase.provideDeleteGame())
     }()
     
     override func viewDidLoad() {
@@ -41,6 +42,10 @@ extension GamesViewController: GamesViewContract {
     func show(games: [CellDto]) {
         gamesTableView.set(elements: games,
                            contract: self)
+    }
+    
+    func destroyBy(guid: String) {
+        presenter.destroyBy(guid: guid)
     }
 }
 

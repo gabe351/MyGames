@@ -10,8 +10,10 @@ import Foundation
 
 protocol GamesViewContract: class {
     func show(games: [CellDto])
+    func destroyBy(guid: String)
 }
 
 protocol GamesPresenterContract: class {
     func loadGames()
+    func destroyBy(guid: String)
 }
