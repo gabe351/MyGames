@@ -16,18 +16,55 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Console Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZX-Qh-JrQ">
-                        <rect key="frame" x="166" y="323" width="111" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Console title placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZX-Qh-JrQ">
+                        <rect key="frame" x="27" y="106" width="320" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Console manufacturer placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MK7-gL-l5a">
+                        <rect key="frame" x="27" y="230" width="320" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Console title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKD-jx-tpm">
+                        <rect key="frame" x="27" y="281" width="320" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Console title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRM-4n-W0N">
+                        <rect key="frame" x="27" y="150" width="320" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="jRM-4n-W0N" firstAttribute="top" secondItem="pZX-Qh-JrQ" secondAttribute="bottom" constant="20" id="6jQ-a9-dZH"/>
+                    <constraint firstItem="jRM-4n-W0N" firstAttribute="leading" secondItem="cKD-jx-tpm" secondAttribute="leading" id="7mb-7G-N1H"/>
+                    <constraint firstItem="cKD-jx-tpm" firstAttribute="top" secondItem="MK7-gL-l5a" secondAttribute="bottom" constant="27" id="8Ac-SG-MQR"/>
+                    <constraint firstItem="jRM-4n-W0N" firstAttribute="trailing" secondItem="MK7-gL-l5a" secondAttribute="trailing" id="CDP-s9-Cib"/>
+                    <constraint firstItem="pZX-Qh-JrQ" firstAttribute="leading" secondItem="jRM-4n-W0N" secondAttribute="leading" id="GP6-cW-Qcy"/>
+                    <constraint firstItem="pZX-Qh-JrQ" firstAttribute="trailing" secondItem="jRM-4n-W0N" secondAttribute="trailing" id="GvK-Q1-ipP"/>
+                    <constraint firstItem="pZX-Qh-JrQ" firstAttribute="centerX" secondItem="2H7-gj-g5l" secondAttribute="centerX" id="RSy-QL-9gh"/>
+                    <constraint firstItem="pZX-Qh-JrQ" firstAttribute="leading" secondItem="03W-w3-8iI" secondAttribute="leading" constant="27" id="SRE-Sv-u6Z"/>
+                    <constraint firstItem="MK7-gL-l5a" firstAttribute="top" secondItem="jRM-4n-W0N" secondAttribute="bottom" constant="57" id="TK2-Vr-cdB"/>
+                    <constraint firstItem="jRM-4n-W0N" firstAttribute="leading" secondItem="MK7-gL-l5a" secondAttribute="leading" id="cBG-1T-3Pt"/>
+                    <constraint firstItem="jRM-4n-W0N" firstAttribute="trailing" secondItem="cKD-jx-tpm" secondAttribute="trailing" id="lnX-ZN-Bw9"/>
+                    <constraint firstItem="pZX-Qh-JrQ" firstAttribute="top" secondItem="03W-w3-8iI" secondAttribute="top" constant="86" id="tfJ-We-Mvq"/>
+                </constraints>
                 <viewLayoutGuide key="safeArea" id="03W-w3-8iI"/>
             </view>
-            <point key="canvasLocation" x="-434" y="-45"/>
+            <connections>
+                <outlet property="consoleManufacturerLabel" destination="cKD-jx-tpm" id="RWd-Yh-6py"/>
+                <outlet property="consoleManufacturerPlaceholderLabel" destination="MK7-gL-l5a" id="hbS-FZ-a7k"/>
+                <outlet property="consoleTitleLabel" destination="jRM-4n-W0N" id="IWi-aj-5Nk"/>
+                <outlet property="consoleTitlePlaceholderLabel" destination="pZX-Qh-JrQ" id="zVB-Ud-6Ia"/>
+            </connections>
+            <point key="canvasLocation" x="-434.39999999999998" y="-45.42728635682159"/>
         </viewController>
     </objects>
 </document>

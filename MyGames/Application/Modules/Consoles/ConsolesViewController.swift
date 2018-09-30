@@ -38,7 +38,7 @@ class ConsolesViewController: BaseViewController {
         
         searchController.searchResultsUpdater                 = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder                = "Search Games"
+        searchController.searchBar.placeholder                = "Search Consoles"
         
         navigationItem.searchController            = searchController
         navigationItem.hidesSearchBarWhenScrolling = false

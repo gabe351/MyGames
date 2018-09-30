@@ -44,6 +44,7 @@ class GameDetailViewController: UIViewController {
                             target: self,
                             action: #selector(didUpdateTapped))
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.title = "Game Detail"
     }
 }
 

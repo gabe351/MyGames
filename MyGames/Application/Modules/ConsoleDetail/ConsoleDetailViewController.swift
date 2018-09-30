@@ -10,6 +10,11 @@ import UIKit
 
 class ConsoleDetailViewController: UIViewController {
     
+    @IBOutlet weak var consoleTitlePlaceholderLabel: UILabel!
+    @IBOutlet weak var consoleTitleLabel: UILabel!
+    @IBOutlet weak var consoleManufacturerPlaceholderLabel: UILabel!
+    @IBOutlet weak var consoleManufacturerLabel: UILabel!
+        
     public static let NIB_NAME = "ConsoleDetailViewController"
     
     lazy var presenter: ConsoleDetailPresenterContract = {
@@ -27,6 +32,7 @@ class ConsoleDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.loadConsoleBy(guid: guid)
+        setupPlaceholderLabels()
     }
     
     @objc func didUpdateTapped() {
@@ -38,6 +44,11 @@ class ConsoleDetailViewController: UIViewController {
                                                  animated: true)
     }
     
+    private func setupPlaceholderLabels() {
+        consoleTitlePlaceholderLabel.text        = "Title"
+        consoleManufacturerPlaceholderLabel.text = "manufacturer"
+    }
+    
     private func setupNavigationBar() {
         navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .edit,
@@ -45,13 +56,14 @@ class ConsoleDetailViewController: UIViewController {
                             action: #selector(didUpdateTapped))
         
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.title = "Console Detail"
     }
 }
 
 extension ConsoleDetailViewController: ConsoleDetailViewContract {
     
     func show(console: Console) {
-        print(console.title)
-        //        TODO: Update view
+        consoleTitleLabel.text        = console.title
+        consoleManufacturerLabel.text = console.manufacturer
     }
 }
