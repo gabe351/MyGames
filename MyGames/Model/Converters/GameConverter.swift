@@ -26,6 +26,7 @@ class GameConverter {
     }
     
     static func entryToEntity(_ entry: GameEntry) -> Game {
+        
         return Game(guid: entry.guid,
                     title: entry.title,
                     year: entry.year,
@@ -33,7 +34,7 @@ class GameConverter {
                     completed: entry.completed,
                     dateOfCompletion: entry.dateOfCompletion,
                     personalNotes: entry.personalNotes,
-                    releasedAt: "")
+                    releasedAt: getReleasedAtFormated(date: Date()))
         //        TODO: Get the year - 16 years ago
     }
     
@@ -53,6 +54,25 @@ class GameConverter {
         }
         
         return entities
+    }
+    
+    private static func getReleasedAtFormated(date: Date) -> String {
+        let year  = getYearFrom(date: date)
+        let older = getYearFrom(date: Date()) - year
+        
+        if older == 0 { return "From this year" }
+        
+        return "\(older) years old"
+    }
+    
+    private static func getYearFrom(date: Date) -> Int {
+        let calendar     = NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)
+        let yearFromDate = calendar?.component(NSCalendar.Unit.year, from: date)
+        
+        guard let year = yearFromDate else {
+            return 0
+        }
+        return year
     }
 }
 

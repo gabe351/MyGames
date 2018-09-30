@@ -14,6 +14,9 @@
 		0478724921612CC60019F75F /* InjectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724821612CC60019F75F /* InjectionUseCase.swift */; };
 		0478724B21612D1C0019F75F /* GamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724A21612D1C0019F75F /* GamesPresenter.swift */; };
 		0478724D21612F9B0019F75F /* MyGamesApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724C21612F9B0019F75F /* MyGamesApplication.swift */; };
+		04787250216130150019F75F /* SaveGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724F216130150019F75F /* SaveGame.swift */; };
+		047872532161305E0019F75F /* SaveConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047872522161305E0019F75F /* SaveConsole.swift */; };
+		047872552161325D0019F75F /* GuidGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047872542161325D0019F75F /* GuidGenerator.swift */; };
 		048DE48F2160DF7500FC5DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE48E2160DF7500FC5DBD /* AppDelegate.swift */; };
 		048DE4912160DF7500FC5DBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4902160DF7500FC5DBD /* ViewController.swift */; };
 		048DE4942160DF7500FC5DBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4922160DF7500FC5DBD /* Main.storyboard */; };
@@ -68,6 +71,9 @@
 		0478724821612CC60019F75F /* InjectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionUseCase.swift; sourceTree = "<group>"; };
 		0478724A21612D1C0019F75F /* GamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesPresenter.swift; sourceTree = "<group>"; };
 		0478724C21612F9B0019F75F /* MyGamesApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGamesApplication.swift; sourceTree = "<group>"; };
+		0478724F216130150019F75F /* SaveGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGame.swift; sourceTree = "<group>"; };
+		047872522161305E0019F75F /* SaveConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveConsole.swift; sourceTree = "<group>"; };
+		047872542161325D0019F75F /* GuidGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidGenerator.swift; sourceTree = "<group>"; };
 		048DE48B2160DF7500FC5DBD /* MyGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048DE48E2160DF7500FC5DBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048DE4902160DF7500FC5DBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,22 @@
 			isa = PBXGroup;
 			children = (
 				0478724621612BD80019F75F /* GetGames.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		0478724E2161300A0019F75F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				0478724F216130150019F75F /* SaveGame.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		04787251216130550019F75F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				047872522161305E0019F75F /* SaveConsole.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -251,6 +273,7 @@
 				048DE4C42160EF0900FC5DBD /* ViewController */,
 				048DE4B92160EAE100FC5DBD /* TableView */,
 				048DE4D62160F83C00FC5DBD /* LoadNibUtils.swift */,
+				047872542161325D0019F75F /* GuidGenerator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -328,6 +351,7 @@
 		048DE4D82160FA8900FC5DBD /* GameForm */ = {
 			isa = PBXGroup;
 			children = (
+				0478724E2161300A0019F75F /* UseCase */,
 				048DE4DB2160FAA300FC5DBD /* View */,
 				048DE4D92160FA9E00FC5DBD /* GameFormViewController.swift */,
 			);
@@ -345,6 +369,7 @@
 		048DE4DE2160FB0800FC5DBD /* ConsoleForm */ = {
 			isa = PBXGroup;
 			children = (
+				04787251216130550019F75F /* UseCase */,
 				048DE4DF2160FB1400FC5DBD /* View */,
 				048DE4E22160FB3900FC5DBD /* ConsoleFormViewController.swift */,
 			);
@@ -657,11 +682,13 @@
 				0478723F216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift in Sources */,
 				048DE4DA2160FA9E00FC5DBD /* GameFormViewController.swift in Sources */,
 				0478724221612AC50019F75F /* InjectionLocalDataSource.swift in Sources */,
+				047872552161325D0019F75F /* GuidGenerator.swift in Sources */,
 				04FDA7E821610DF2007E20BD /* GameLocalDataSource.swift in Sources */,
 				048DE4CB2160F14B00FC5DBD /* GameDetailViewController.swift in Sources */,
 				048DE4D72160F83C00FC5DBD /* LoadNibUtils.swift in Sources */,
 				048DE4912160DF7500FC5DBD /* ViewController.swift in Sources */,
 				048DE4B42160E9AF00FC5DBD /* GamesViewController.swift in Sources */,
+				047872532161305E0019F75F /* SaveConsole.swift in Sources */,
 				048DE48F2160DF7500FC5DBD /* AppDelegate.swift in Sources */,
 				0478724921612CC60019F75F /* InjectionUseCase.swift in Sources */,
 				048DE4BE2160EB2B00FC5DBD /* BaseTableViewCell.swift in Sources */,
@@ -674,6 +701,7 @@
 				04FDA7EC21610EB6007E20BD /* GameLocalDataSourceImpl.swift in Sources */,
 				048DE4E32160FB3900FC5DBD /* ConsoleFormViewController.swift in Sources */,
 				048DE4C92160F0A500FC5DBD /* BaseTableViewContract.swift in Sources */,
+				04787250216130150019F75F /* SaveGame.swift in Sources */,
 				0478724421612B610019F75F /* GamesContracts.swift in Sources */,
 				0478724721612BD80019F75F /* GetGames.swift in Sources */,
 				048DE4BB2160EAEE00FC5DBD /* BaseTableView.swift in Sources */,

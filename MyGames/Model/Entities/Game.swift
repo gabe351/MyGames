@@ -16,5 +16,5 @@ public struct Game {
     let completed: Bool
     let dateOfCompletion: Date
     let personalNotes: String
-    let releasedAt: String
+    let releasedAt: String    
 }

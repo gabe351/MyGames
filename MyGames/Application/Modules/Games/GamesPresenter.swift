@@ -21,21 +21,7 @@ class GamesPresenter: GamesPresenterContract {
     
     func loadGames() {
         let games = getGames.allGames()
-        view?.show(games: [
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw"),
-            CellDto(title: "abc", subtitle: "adw")
-            ])
+        view?.show(games: convertGameToCellDto(games: games))
     }
     
     private func convertGameToCellDto(games: [Game]) -> [CellDto] {
