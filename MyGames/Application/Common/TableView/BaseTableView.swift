@@ -44,5 +44,17 @@ class BaseTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         contract?.didCellSelected()
-    }                
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            contract?.destroyBy(guid: cellDtos[indexPath.row].guid)
+            self.cellDtos.remove(at: indexPath.row)
+            self.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 }

@@ -47,6 +47,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MSy-AC-cBb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Kus-CI-qFW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fPV-7V-qBU"/>
@@ -64,7 +65,7 @@
         <scene sceneID="PSG-UT-3ch">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RX8-kz-vwz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Games" id="ylz-rx-Sbw"/>
+                    <tabBarItem key="tabBarItem" title="Games" image="game" id="ylz-rx-Sbw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ydv-6L-blk">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -115,7 +116,7 @@
         <scene sceneID="eIN-kr-Tzk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R26-Y2-6qa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Consoles" id="uYm-Ta-lVg"/>
+                    <tabBarItem key="tabBarItem" title="Consoles" image="console" id="uYm-Ta-lVg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MX9-5n-Tun">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -131,4 +132,8 @@
             <point key="canvasLocation" x="1076" y="1048"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="console" width="23" height="23"/>
+        <image name="game" width="23" height="23"/>
+    </resources>
 </document>
