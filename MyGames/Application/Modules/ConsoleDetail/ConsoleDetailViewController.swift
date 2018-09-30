@@ -12,14 +12,21 @@ class ConsoleDetailViewController: UIViewController {
     
     public static let NIB_NAME = "ConsoleDetailViewController"
     
+    lazy var presenter: ConsoleDetailPresenterContract = {
+        return ConsoleDetailPresenter(view: self,
+                                      getConsoles: InjectionUseCase.provideGetConsoles())
+    }()
+    
+    var guid = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem =
-            UIBarButtonItem(barButtonSystemItem: .edit,
-                            target: self,
-                            action: #selector(didUpdateTapped))
-        
-        navigationItem.largeTitleDisplayMode = .never
+        setupNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.loadConsoleBy(guid: guid)
     }
     
     @objc func didUpdateTapped() {
@@ -29,5 +36,22 @@ class ConsoleDetailViewController: UIViewController {
         
         navigationController?.pushViewController(formViewController,
                                                  animated: true)
-    }    
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.rightBarButtonItem =
+            UIBarButtonItem(barButtonSystemItem: .edit,
+                            target: self,
+                            action: #selector(didUpdateTapped))
+        
+        navigationItem.largeTitleDisplayMode = .never
+    }
+}
+
+extension ConsoleDetailViewController: ConsoleDetailViewContract {
+    
+    func show(console: Console) {
+        print(console.title)
+        //        TODO: Update view
+    }
 }

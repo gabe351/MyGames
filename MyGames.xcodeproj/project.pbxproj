@@ -47,6 +47,8 @@
 		048DE4E32160FB3900FC5DBD /* ConsoleFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4E22160FB3900FC5DBD /* ConsoleFormViewController.swift */; };
 		04BACD612161506A00077F6E /* GameDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BACD602161506A00077F6E /* GameDetailContracts.swift */; };
 		04BACD63216150AD00077F6E /* GameDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BACD62216150AD00077F6E /* GameDetailPresenter.swift */; };
+		04BACD652161528500077F6E /* ConsoleDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BACD642161528500077F6E /* ConsoleDetailContracts.swift */; };
+		04BACD672161529600077F6E /* ConsoleDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BACD662161529600077F6E /* ConsoleDetailPresenter.swift */; };
 		04FDA7D92161080D007E20BD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDA7D82161080D007E20BD /* Game.swift */; };
 		04FDA7DB21610814007E20BD /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDA7DA21610814007E20BD /* Console.swift */; };
 		04FDA7DE216108DC007E20BD /* GameConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDA7DD216108DC007E20BD /* GameConverter.swift */; };
@@ -115,6 +117,8 @@
 		048DE4E22160FB3900FC5DBD /* ConsoleFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleFormViewController.swift; sourceTree = "<group>"; };
 		04BACD602161506A00077F6E /* GameDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailContracts.swift; sourceTree = "<group>"; };
 		04BACD62216150AD00077F6E /* GameDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailPresenter.swift; sourceTree = "<group>"; };
+		04BACD642161528500077F6E /* ConsoleDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleDetailContracts.swift; sourceTree = "<group>"; };
+		04BACD662161529600077F6E /* ConsoleDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleDetailPresenter.swift; sourceTree = "<group>"; };
 		04FDA7D82161080D007E20BD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		04FDA7DA21610814007E20BD /* Console.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 		04FDA7DD216108DC007E20BD /* GameConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConverter.swift; sourceTree = "<group>"; };
@@ -263,11 +267,11 @@
 			isa = PBXGroup;
 			children = (
 				048DE4B22160E99F00FC5DBD /* Games */,
-				048DE4D82160FA8900FC5DBD /* GameForm */,
-				048DE4C72160F07100FC5DBD /* GameDetail */,
 				048DE4B52160EA6400FC5DBD /* Consoles */,
-				048DE4DE2160FB0800FC5DBD /* ConsoleForm */,
+				048DE4C72160F07100FC5DBD /* GameDetail */,
 				048DE4CF2160F78900FC5DBD /* ConsoleDetail */,
+				048DE4D82160FA8900FC5DBD /* GameForm */,
+				048DE4DE2160FB0800FC5DBD /* ConsoleForm */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -365,6 +369,8 @@
 			children = (
 				048DE4D22160F7CD00FC5DBD /* View */,
 				048DE4D32160F7DE00FC5DBD /* ConsoleDetailViewController.swift */,
+				04BACD642161528500077F6E /* ConsoleDetailContracts.swift */,
+				04BACD662161529600077F6E /* ConsoleDetailPresenter.swift */,
 			);
 			path = ConsoleDetail;
 			sourceTree = "<group>";
@@ -705,6 +711,7 @@
 				0478724B21612D1C0019F75F /* GamesPresenter.swift in Sources */,
 				04FDA7E4216109D8007E20BD /* ConsoleEntry.swift in Sources */,
 				048DE4D42160F7DE00FC5DBD /* ConsoleDetailViewController.swift in Sources */,
+				04BACD672161529600077F6E /* ConsoleDetailPresenter.swift in Sources */,
 				04FDA7D92161080D007E20BD /* Game.swift in Sources */,
 				04787258216136C90019F75F /* GetConsoles.swift in Sources */,
 				0478724D21612F9B0019F75F /* MyGamesApplication.swift in Sources */,
@@ -738,6 +745,7 @@
 				0478724721612BD80019F75F /* GetGames.swift in Sources */,
 				0478725C216138200019F75F /* ConsolesPresenter.swift in Sources */,
 				048DE4BB2160EAEE00FC5DBD /* BaseTableView.swift in Sources */,
+				04BACD652161528500077F6E /* ConsoleDetailContracts.swift in Sources */,
 				04BACD612161506A00077F6E /* GameDetailContracts.swift in Sources */,
 				0478725A216137400019F75F /* ConsolesContracts.swift in Sources */,
 				04787260216139C10019F75F /* DeleteConsole.swift in Sources */,

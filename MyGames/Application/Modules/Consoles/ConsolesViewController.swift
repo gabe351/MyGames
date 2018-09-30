@@ -96,6 +96,8 @@ extension ConsolesViewController: BaseTableViewContract {
             loadNibNamed(ConsoleDetailViewController.NIB_NAME,
                          owner: self) ?? ConsoleDetailViewController()
         
+        detailViewController.guid = guid
+        
         navigationController?.pushViewController(detailViewController,
                                                  animated: true)
     }

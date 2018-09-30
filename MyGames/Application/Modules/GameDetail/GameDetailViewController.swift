@@ -38,8 +38,7 @@ class GameDetailViewController: UIViewController {
                                                  animated: true)
     }
     
-    private func setupNavigationBar() {
-        navigationItem.largeTitleDisplayMode = .never
+    private func setupNavigationBar() {        
         navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .edit,
                             target: self,
