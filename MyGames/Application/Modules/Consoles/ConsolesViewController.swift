@@ -47,8 +47,7 @@ class ConsolesViewController: BaseViewController {
     override func didAddTapped() {
         let formViewController: ConsoleFormViewController =
             loadNibNamed(ConsoleFormViewController.NIB_NAME,
-                         owner: self) ?? ConsoleFormViewController()
-        
+                         owner: self) ?? ConsoleFormViewController()        
         navigationController?.pushViewController(formViewController,
                                                  animated: true)        
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042478252161666B004D121F /* ConsoleFormContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042478242161666B004D121F /* ConsoleFormContracts.swift */; };
+		04247827216166E7004D121F /* ConsoleFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04247826216166E7004D121F /* ConsoleFormPresenter.swift */; };
 		0478723F216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478723E216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift */; };
 		0478724221612AC50019F75F /* InjectionLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724121612AC50019F75F /* InjectionLocalDataSource.swift */; };
 		0478724421612B610019F75F /* GamesContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724321612B610019F75F /* GamesContracts.swift */; };
@@ -23,7 +25,6 @@
 		0478725E2161398B0019F75F /* DeleteGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478725D2161398B0019F75F /* DeleteGame.swift */; };
 		04787260216139C10019F75F /* DeleteConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478725F216139C10019F75F /* DeleteConsole.swift */; };
 		048DE48F2160DF7500FC5DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE48E2160DF7500FC5DBD /* AppDelegate.swift */; };
-		048DE4912160DF7500FC5DBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE4902160DF7500FC5DBD /* ViewController.swift */; };
 		048DE4942160DF7500FC5DBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4922160DF7500FC5DBD /* Main.storyboard */; };
 		048DE4962160DF7600FC5DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4952160DF7600FC5DBD /* Assets.xcassets */; };
 		048DE4992160DF7600FC5DBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE4972160DF7600FC5DBD /* LaunchScreen.storyboard */; };
@@ -73,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042478242161666B004D121F /* ConsoleFormContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleFormContracts.swift; sourceTree = "<group>"; };
+		04247826216166E7004D121F /* ConsoleFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleFormPresenter.swift; sourceTree = "<group>"; };
 		0478723E216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		0478724121612AC50019F75F /* InjectionLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionLocalDataSource.swift; sourceTree = "<group>"; };
 		0478724321612B610019F75F /* GamesContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesContracts.swift; sourceTree = "<group>"; };
@@ -90,7 +93,6 @@
 		0478725F216139C10019F75F /* DeleteConsole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteConsole.swift; sourceTree = "<group>"; };
 		048DE48B2160DF7500FC5DBD /* MyGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048DE48E2160DF7500FC5DBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		048DE4902160DF7500FC5DBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		048DE4932160DF7500FC5DBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		048DE4952160DF7600FC5DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048DE4982160DF7600FC5DBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -226,7 +228,6 @@
 				04FDA7D7216107E6007E20BD /* Model */,
 				048DE4B02160E15F00FC5DBD /* Infrastructure */,
 				048DE48E2160DF7500FC5DBD /* AppDelegate.swift */,
-				048DE4902160DF7500FC5DBD /* ViewController.swift */,
 				048DE4922160DF7500FC5DBD /* Main.storyboard */,
 				048DE4952160DF7600FC5DBD /* Assets.xcassets */,
 				048DE4972160DF7600FC5DBD /* LaunchScreen.storyboard */,
@@ -407,6 +408,8 @@
 				04787251216130550019F75F /* UseCase */,
 				048DE4DF2160FB1400FC5DBD /* View */,
 				048DE4E22160FB3900FC5DBD /* ConsoleFormViewController.swift */,
+				04247826216166E7004D121F /* ConsoleFormPresenter.swift */,
+				042478242161666B004D121F /* ConsoleFormContracts.swift */,
 			);
 			path = ConsoleForm;
 			sourceTree = "<group>";
@@ -723,7 +726,6 @@
 				04FDA7E821610DF2007E20BD /* GameLocalDataSource.swift in Sources */,
 				048DE4CB2160F14B00FC5DBD /* GameDetailViewController.swift in Sources */,
 				048DE4D72160F83C00FC5DBD /* LoadNibUtils.swift in Sources */,
-				048DE4912160DF7500FC5DBD /* ViewController.swift in Sources */,
 				048DE4B42160E9AF00FC5DBD /* GamesViewController.swift in Sources */,
 				047872532161305E0019F75F /* SaveConsole.swift in Sources */,
 				04BACD63216150AD00077F6E /* GameDetailPresenter.swift in Sources */,
@@ -736,6 +738,7 @@
 				04FDA7E221610949007E20BD /* GameEntry.swift in Sources */,
 				04FDA7EA21610E86007E20BD /* ConsoleLocalDataSource.swift in Sources */,
 				04FDA7DB21610814007E20BD /* Console.swift in Sources */,
+				04247827216166E7004D121F /* ConsoleFormPresenter.swift in Sources */,
 				0478725E2161398B0019F75F /* DeleteGame.swift in Sources */,
 				04FDA7EC21610EB6007E20BD /* GameLocalDataSourceImpl.swift in Sources */,
 				048DE4E32160FB3900FC5DBD /* ConsoleFormViewController.swift in Sources */,
@@ -746,6 +749,7 @@
 				0478725C216138200019F75F /* ConsolesPresenter.swift in Sources */,
 				048DE4BB2160EAEE00FC5DBD /* BaseTableView.swift in Sources */,
 				04BACD652161528500077F6E /* ConsoleDetailContracts.swift in Sources */,
+				042478252161666B004D121F /* ConsoleFormContracts.swift in Sources */,
 				04BACD612161506A00077F6E /* GameDetailContracts.swift in Sources */,
 				0478725A216137400019F75F /* ConsolesContracts.swift in Sources */,
 				04787260216139C10019F75F /* DeleteConsole.swift in Sources */,

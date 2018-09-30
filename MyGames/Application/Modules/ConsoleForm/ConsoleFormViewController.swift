@@ -12,6 +12,14 @@ class ConsoleFormViewController: UIViewController {
     
     public static let NIB_NAME = "ConsoleFormViewController"
     
+    lazy var presenter: ConsoleFormPresenterContract = {
+        return ConsoleFormPresenter(view: self,
+                                    saveConsole: InjectionUseCase.provideSaveConsole())
+    }()
+    
+    var console: Console?
+    var guid = GuidGenerator.generate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +30,31 @@ class ConsoleFormViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setCurrentConsole()
+    }
+    
     @objc func didSaveTapped() {
         //        If save success
+        let console = Console(guid: guid,
+                              title: "",
+                              manufacturer: "")
+        
+        presenter.save(console: console)
         navigationController?.popViewController(animated: true)
+    }
+}
+
+extension ConsoleFormViewController: ConsoleFormViewContract {
+    func setCurrentConsole() {
+        if let currentConsole = console {
+            guid = currentConsole.guid
+            //            fill all fields
+        }
+    }
+    
+    func save(console: Console) {
+        
     }
 }

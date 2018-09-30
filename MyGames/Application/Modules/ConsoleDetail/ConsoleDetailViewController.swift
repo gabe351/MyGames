@@ -23,6 +23,7 @@ class ConsoleDetailViewController: UIViewController {
     }()
     
     var guid = ""
+    var console: Console?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +32,15 @@ class ConsoleDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.loadConsoleBy(guid: guid)
+        presenter.loadConsoleBy(guid: guid)        
         setupPlaceholderLabels()
     }
     
     @objc func didUpdateTapped() {
         let formViewController: ConsoleFormViewController =
             loadNibNamed(ConsoleFormViewController.NIB_NAME,
-                         owner: self) ?? ConsoleFormViewController()
-        
+                         owner: self) ?? ConsoleFormViewController()        
+        formViewController.console = console
         navigationController?.pushViewController(formViewController,
                                                  animated: true)
     }
@@ -63,6 +64,7 @@ class ConsoleDetailViewController: UIViewController {
 extension ConsoleDetailViewController: ConsoleDetailViewContract {
     
     func show(console: Console) {
+        self.console = console
         consoleTitleLabel.text        = console.title
         consoleManufacturerLabel.text = console.manufacturer
     }
