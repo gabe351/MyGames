@@ -34,6 +34,7 @@ class ConsoleFormViewController: UIViewController {
                             target: self,
                             action: #selector(didSaveTapped))
         navigationItem.largeTitleDisplayMode = .never
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {

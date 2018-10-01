@@ -45,7 +45,8 @@ class GameFormViewController: UIViewController {
             UIBarButtonItem(barButtonSystemItem: .save,
                             target: self,
                             action: #selector(didSaveTapped))
-        navigationItem.largeTitleDisplayMode = .never                
+        navigationItem.largeTitleDisplayMode = .never
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {

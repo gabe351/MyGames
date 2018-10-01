@@ -23,7 +23,8 @@ class GamesViewController: BaseViewController {
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
