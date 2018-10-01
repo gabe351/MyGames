@@ -13,5 +13,7 @@ public protocol GameLocalDataSource: class {
     func allGames() -> [Game]
     func findBy(guid: String) -> Game
     func save(game: Game)
-    func destroyBy(guid: String)    
+    func destroyBy(guid: String)
+
+    func haveInitialGames() -> Bool
 }

@@ -10,15 +10,14 @@ import Foundation
 
 class MyGamesAppliation {
     
-    static let saveGame =
-        SaveGame(localDataSource: InjectionLocalDataSource
-            .provideGameLocalDataSource())
-    
-    static let saveConsole =
-        SaveConsole(localDataSource: InjectionLocalDataSource
-            .provideConsoleLocalDataSource())
-    
-    static func saveInitialGames() {
+    private let consoleLocalDataSource = InjectionLocalDataSource.provideConsoleLocalDataSource()
+    private let gameLocalDataSource = InjectionLocalDataSource.provideGameLocalDataSource()
+            
+    public func saveInitialGames() {
+        
+        if !gameLocalDataSource.haveInitialGames() {
+            return
+        }
         
         let older = DateUtils.buildDateFrom(formatedDate: "11/10/1994")
         
@@ -50,11 +49,16 @@ class MyGamesAppliation {
         ]
         
         initalGames.forEach {
-            saveGame.save(game: $0)
+            gameLocalDataSource.save(game: $0)
         }        
     }
     
-    static func saveInitialConsoles() {
+    public func saveInitialConsoles() {
+        
+        if !consoleLocalDataSource.haveConsoleSaved() {
+            return
+        }
+        
         let initialConsoles = [
             Console(guid: "first-fake-console-guid",
                     title: "PS4",
@@ -68,7 +72,7 @@ class MyGamesAppliation {
         ]
         
         initialConsoles.forEach {
-            saveConsole.save(console: $0)
+            consoleLocalDataSource.save(console: $0)
         }
     }    
 }

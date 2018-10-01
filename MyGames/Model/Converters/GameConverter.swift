@@ -34,8 +34,7 @@ class GameConverter {
                     completed: entry.completed,
                     dateOfCompletion: entry.dateOfCompletion,
                     personalNotes: entry.personalNotes,
-                    releasedAt: DateUtils.getReleasedAtFormated(date: entry.yearDate))
-        //        TODO: Get the year - 16 years ago
+                    releasedAt: DateUtils.getReleasedAtFormated(date: entry.yearDate))        
     }
     
     static func entitiesToEntries(_ entites: [Game]) -> [GameEntry] {

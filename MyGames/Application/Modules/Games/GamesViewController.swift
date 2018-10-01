@@ -23,13 +23,14 @@ class GamesViewController: BaseViewController {
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.loadGames()
         gamesTableView.contract = self
+        self.tabBarController?.tabBar.tintColor = UIColor.red
     }
     
     override func setupSearchBar() {
@@ -51,7 +52,7 @@ class GamesViewController: BaseViewController {
         
         navigationController?.pushViewController(formViewController,
                                                  animated: true)
-    }
+    }        
 }
 
 extension GamesViewController: UISearchResultsUpdating {

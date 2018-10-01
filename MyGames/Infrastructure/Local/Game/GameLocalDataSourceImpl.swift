@@ -74,6 +74,19 @@ public class GameLocalDataSourceImpl: GameLocalDataSource {
         }        
     }
     
+    public func haveInitialGames() -> Bool {
+        let guids = ["first-fake-game-guid",
+                     "second-fake-game-guid",
+                     "third-fake-game-guid"]
+        let games = realm.objects(GameEntry.self).filter("guid IN %@", guids)
+        
+        if games.count == 3 {
+            return true
+        }
+        
+        return false
+    }
+        
     public static func emptyGame() -> Game {
         return Game(guid: "",
                     title: "",

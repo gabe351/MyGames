@@ -30,6 +30,7 @@ class ConsolesViewController: BaseViewController {
         super.viewWillAppear(animated)
         presenter.loadConsoles()
         consolesTableView.contract = self
+        self.tabBarController?.tabBar.tintColor = UIColor.red
     }
     
     override func setupSearchBar() {

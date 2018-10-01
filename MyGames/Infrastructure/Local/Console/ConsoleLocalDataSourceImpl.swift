@@ -75,6 +75,21 @@ public class ConsoleLocalDataSourceImpl: ConsoleLocalDataSource {
         }
     }
     
+    public func haveConsoleSaved() -> Bool {
+                
+        let guids = ["first-fake-console-guid",
+                     "second-fake-console-guid",
+                     "third-fake-console-guid"]
+        
+        let games = realm.objects(ConsoleEntry.self).filter("guid IN %@", guids)
+        
+        if games.count == 3 {
+            return true
+        }
+        
+        return false
+    }
+    
     public static func emptyConsole() -> Console {
         return Console(guid: "",
                        title: "",

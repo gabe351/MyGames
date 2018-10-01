@@ -14,4 +14,5 @@ public protocol ConsoleLocalDataSource: class {
     func findBy(guid: String) -> Console
     func save(console: Console)
     func destroyBy(guid: String)
+    func haveConsoleSaved() -> Bool
 }

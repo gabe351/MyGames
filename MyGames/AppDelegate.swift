@@ -15,12 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        
-        MyGamesAppliation.saveInitialConsoles()
-        MyGamesAppliation.saveInitialGames()
-        
+        addInitialData()
         return true
+    }
+    
+    private func addInitialData() {
+        MyGamesAppliation().saveInitialConsoles()
+        MyGamesAppliation().saveInitialGames()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
