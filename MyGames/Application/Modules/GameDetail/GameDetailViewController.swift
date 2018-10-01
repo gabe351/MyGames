@@ -78,13 +78,20 @@ extension GameDetailViewController: GameDetailViewContract {
     func show(game: Game) {
         self.game                = game
         tiitleLabel.text         = game.title
-        yearLabel.text           = game.year
+        yearLabel.text           = DateUtils.getReleasedAtFormated(date: game.yearDate)
         consoleLabel.text        = game.console
         notesLabel.text          = game.personalNotes
         completedLabel.text      = getCompleted(game.completed)
-        //TODO: update date utils
-        completionDateLabel.text = "\(game.dateOfCompletion)"
+        setupCompletionAt(game)                
+    }
+    
+    private func setupCompletionAt(_ game: Game) {
+        if !game.completed {
+            completionDateLabel.text = "This game is no completed yet"
+            return
+        }
         
+        completionDateLabel.text = DateUtils.buildFormatedDate(game.dateOfCompletion)
     }
     
     private func getCompleted(_ isCompleted: Bool) -> String {

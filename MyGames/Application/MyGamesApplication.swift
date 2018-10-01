@@ -20,31 +20,33 @@ class MyGamesAppliation {
     
     static func saveInitialGames() {
         
+        let older = DateUtils.buildDateFrom(formatedDate: "11/10/1994")
+        
         let initalGames = [
             Game(guid: "first-fake-game-guid",
                  title: "God of war",
-                 year: "2018",
+                 yearDate: older,
                  console: "PS4",
-                 completed: true,
+                 completed: false,
                  dateOfCompletion: Date(),
                  personalNotes: "That is a good game",
-                 releasedAt: "1 year ago"),
+                 releasedAt: ""),
             Game(guid: "second-fake-game-guid",
                  title: "The Witcher 3",
-                 year: "2018",
+                 yearDate: Date(),
                  console: "XboxOne",
                  completed: true,
                  dateOfCompletion: Date(),
                  personalNotes: "That is a good game",
-                 releasedAt: "2 years ago"),
+                 releasedAt: ""),
             Game(guid: "third-fake-game-guid",
                  title: "Last of Us",
-                 year: "2018",
+                 yearDate: Date(),
                  console: "Nintendo",
                  completed: true,
                  dateOfCompletion: Date(),
                  personalNotes: "That is a good game",
-                 releasedAt: "3 years ago")
+                 releasedAt: "")
         ]
         
         initalGames.forEach {

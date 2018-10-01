@@ -77,7 +77,7 @@ public class GameLocalDataSourceImpl: GameLocalDataSource {
     public static func emptyGame() -> Game {
         return Game(guid: "",
                     title: "",
-                    year: "",
+                    yearDate: Date(),
                     console: "",
                     completed: false,
                     dateOfCompletion: Date(),

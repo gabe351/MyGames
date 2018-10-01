@@ -11,8 +11,8 @@ import RealmSwift
 class GameEntry: Object {
         
     @objc dynamic var guid             = String()
-    @objc dynamic var title            = String()
-    @objc dynamic var year             = String()
+    @objc dynamic var title            = String()    
+    @objc dynamic var yearDate         = Date()
     @objc dynamic var console          = String()
     @objc dynamic var completed        = Bool()
     @objc dynamic var dateOfCompletion = Date()

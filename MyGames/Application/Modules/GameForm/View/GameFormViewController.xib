@@ -80,9 +80,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EZl-wb-iJh">
-                                <rect key="frame" x="163" y="555" width="49" height="31"/>
+                                <rect key="frame" x="163" y="555" width="51" height="31"/>
                             </switch>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-0L-5Ks">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-0L-5Ks">
                                 <rect key="frame" x="0.0" y="674" width="375" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="xDl-Xs-RM7"/>
@@ -112,11 +112,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Yl5-B2-Y3T"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This field cannot be empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vue-jX-IuT">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This field cannot be empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vue-jX-IuT">
                                 <rect key="frame" x="34" y="142" width="306" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.17523353150000001" blue="0.15167879179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,6 +176,21 @@
                 <viewLayoutGuide key="safeArea" id="88A-oo-gZB"/>
             </view>
             <size key="freeformSize" width="375" height="1000"/>
+            <connections>
+                <outlet property="completedPlaceholderLabel" destination="wGa-Ym-kKd" id="cxc-iP-C7L"/>
+                <outlet property="completedSwitch" destination="EZl-wb-iJh" id="lN8-z1-WlY"/>
+                <outlet property="completionDatePicker" destination="7Xu-0L-5Ks" id="DaD-dd-TIi"/>
+                <outlet property="completionDatePlaceholderLabel" destination="2qI-vT-4v2" id="0R3-M4-9Me"/>
+                <outlet property="consolePicker" destination="yK7-xN-hvw" id="dhx-IA-lIP"/>
+                <outlet property="consolePlaceholderLabel" destination="nWe-ED-Q5H" id="vOm-ta-7ga"/>
+                <outlet property="notesPlaceholderLabel" destination="2Sr-tP-OpN" id="EGY-DR-lul"/>
+                <outlet property="notesTextView" destination="8wn-zp-oUU" id="886-Yg-wXK"/>
+                <outlet property="titleErrorMessage" destination="Vue-jX-IuT" id="EDr-Re-1Fp"/>
+                <outlet property="titlePlaceholderLabel" destination="KCK-63-gHh" id="eXy-b0-gib"/>
+                <outlet property="titleTextField" destination="vpW-aI-z2g" id="pZb-yX-twU"/>
+                <outlet property="yearDatePicker" destination="NMI-pK-bpb" id="Khz-BR-S9A"/>
+                <outlet property="yearPlaceholderLabel" destination="DKx-zG-rR7" id="fmQ-5o-VGC"/>
+            </connections>
             <point key="canvasLocation" x="101.59999999999999" y="53.073463268365821"/>
         </viewController>
     </objects>

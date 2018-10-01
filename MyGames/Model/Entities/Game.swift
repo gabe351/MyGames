@@ -10,8 +10,8 @@ import Foundation
 
 public struct Game {
     let guid: String
-    let title: String
-    let year: String
+    let title: String    
+    let yearDate: Date
     let console: String
     let completed: Bool
     let dateOfCompletion: Date

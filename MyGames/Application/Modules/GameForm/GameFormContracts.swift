@@ -10,8 +10,10 @@ import Foundation
 
 protocol GameFormViewContract: class {
     func setCurrentGame()
+    func show(consoleTitles: [String])
 }
 
-protocol GameFormPresenterContract: class {    
+protocol GameFormPresenterContract: class {
+    func loadConsoles()
     func save(game: Game)
 }
