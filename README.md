@@ -27,6 +27,6 @@ CMD + R to run the project.
 CMD + U to run tests.
 
 ## Libraries used
-* [Realm] (https://realm.io/docs/swift/latest/) -> Realm is a mobile database that runs directly inside phones, tablets or wearables.
+* [Realm](https://realm.io/docs/swift/latest/) -> Realm is a mobile database that runs directly inside phones, tablets or wearables.
 * [Quick](https://github.com/Quick/Quick) -> Behavior-driven development framework for Swift and Objective-C.
 * [Nimble](https://github.com/Quick/Nimble) -> A Matcher Framework for Swift and Objective-C.
