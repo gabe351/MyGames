@@ -31,7 +31,7 @@ public class ConsoleLocalDataSourceImpl: ConsoleLocalDataSource {
         INSTANCE = nil
     }
     
-    public func allConsoles() -> [Console] {
+    public func allConsoles() -> [Console] {        
         let entries = Array(realm.objects(ConsoleEntry.self))
         
         return ConsoleConverter.entriesToEntites(entries)
@@ -51,6 +51,7 @@ public class ConsoleLocalDataSourceImpl: ConsoleLocalDataSource {
     
     public func save(console: Console) {
         let entry = ConsoleConverter.entityToEntry(console)
+        if console.title.isEmpty { return }
         
         do {
             try realm.write {
@@ -83,7 +84,7 @@ public class ConsoleLocalDataSourceImpl: ConsoleLocalDataSource {
         
         let games = realm.objects(ConsoleEntry.self).filter("guid IN %@", guids)
         
-        if games.count == 3 {
+        if !games.isEmpty {
             return true
         }
         

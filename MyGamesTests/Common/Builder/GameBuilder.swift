@@ -12,7 +12,7 @@ import Foundation
 public class GameBuilder {
     
     public static func buildWith(_ guid: String = GuidGenerator.generate(),
-                               _ title: String = "",
+                               _ title: String = "test-title",
                                _ console: String = "") -> Game {
         return Game(guid: guid,
                     title: title,
@@ -25,7 +25,7 @@ public class GameBuilder {
     }
     
     public static func buildEntryWith(_ guid: String = GuidGenerator.generate(),
-                                    _ title: String = "",
+                                    _ title: String = "testTitle",
                                     _ console: String = "") -> GameEntry {
         return GameConverter.entityToEntry(buildWith(guid,
                                                      title,

@@ -12,7 +12,7 @@ import Foundation
 class ConsoleBuilder {
         
     public static func buildWith(_ guid: String = GuidGenerator.generate(),
-                                  _ title: String = "",
+                                  _ title: String = "test-title",
                                   _ manufacturer: String = "") -> Console {
         return Console(guid: guid,
                        title: title,
@@ -20,7 +20,7 @@ class ConsoleBuilder {
     }
     
     public static func buildEntryWith(_ guid: String = GuidGenerator.generate(),
-                                      _ title: String = "",
+                                      _ title: String = "test-title",
                                       _ manufacturer: String = "") -> ConsoleEntry {
         return ConsoleConverter.entityToEntry(buildWith(guid,
                                                         title,

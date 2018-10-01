@@ -10,7 +10,7 @@ import RealmSwift
 
 public class InjectionLocalDataSource {
     static let realm = try! Realm()
-    
+        
     public static func provideGameLocalDataSource() -> GameLocalDataSource {
         return GameLocalDataSourceImpl.getInstance(realm: realm)
     }

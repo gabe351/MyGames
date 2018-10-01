@@ -52,7 +52,7 @@ public class GameLocalDataSourceImpl: GameLocalDataSource {
     
     public func save(game: Game) {
         let entry = GameConverter.entityToEntry(game)
-        
+        if game.title.isEmpty { return }
         do {
             try realm.write {
                 realm.add(entry, update: true)
@@ -82,14 +82,10 @@ public class GameLocalDataSourceImpl: GameLocalDataSource {
                      "third-fake-game-guid"]
         let games = realm.objects(GameEntry.self).filter("guid IN %@", guids)
         
-        if games.count == 3 {
+        if !games.isEmpty {
             return true
         }
-        
-        if allGames().isEmpty {            
-            return true
-        }
-        
+                
         return false
     }
         

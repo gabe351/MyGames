@@ -25,7 +25,7 @@ class FindGameActionTest: QuickSpec {
         beforeEach {
             realmClean()
         }
-                        
+        
         describe("#find") {
             
             let realm = realmInstance()
