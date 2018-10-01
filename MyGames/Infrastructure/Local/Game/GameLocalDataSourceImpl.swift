@@ -32,7 +32,9 @@ public class GameLocalDataSourceImpl: GameLocalDataSource {
     }
     
     public func allGames() -> [Game] {
-        let entries = Array(realm.objects(GameEntry.self))
+        let entries = Array(realm.objects(GameEntry.self)
+            .sorted(byKeyPath: "yearDate",
+                    ascending: false))
         
         return GameConverter.entriesToEntites(entries)
     }
@@ -81,6 +83,10 @@ public class GameLocalDataSourceImpl: GameLocalDataSource {
         let games = realm.objects(GameEntry.self).filter("guid IN %@", guids)
         
         if games.count == 3 {
+            return true
+        }
+        
+        if allGames().isEmpty {            
             return true
         }
         

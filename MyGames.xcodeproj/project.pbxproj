@@ -11,6 +11,18 @@
 		04247827216166E7004D121F /* ConsoleFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04247826216166E7004D121F /* ConsoleFormPresenter.swift */; };
 		042478292161699D004D121F /* GameFormContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042478282161699D004D121F /* GameFormContracts.swift */; };
 		0424782B216169EA004D121F /* GabeFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424782A216169EA004D121F /* GabeFormPresenter.swift */; };
+		043365542162449300607B7B /* RealmShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043365532162449300607B7B /* RealmShared.swift */; };
+		043365562162450300607B7B /* SaveGameActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043365552162450300607B7B /* SaveGameActionTest.swift */; };
+		043365592162460F00607B7B /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043365582162460F00607B7B /* Action.swift */; };
+		0433655C2162497500607B7B /* SaveConsoleActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433655B2162497500607B7B /* SaveConsoleActionTest.swift */; };
+		0433655E21624B2400607B7B /* AllGamesActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433655D21624B2400607B7B /* AllGamesActionTest.swift */; };
+		0433656021624D5800607B7B /* GameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433655F21624D5800607B7B /* GameBuilder.swift */; };
+		0433656321624E5200607B7B /* ConsoleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433656221624E5200607B7B /* ConsoleBuilder.swift */; };
+		0433656521624F6B00607B7B /* DestroyGameActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433656421624F6B00607B7B /* DestroyGameActionTest.swift */; };
+		0433656721624F7B00607B7B /* FindGameActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433656621624F7B00607B7B /* FindGameActionTest.swift */; };
+		043365692162513800607B7B /* AllConsolesActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043365682162513800607B7B /* AllConsolesActionTest.swift */; };
+		0433656B216251B900607B7B /* DestroyConsoleActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433656A216251B900607B7B /* DestroyConsoleActionTest.swift */; };
+		0433656D2162521200607B7B /* FindConsoleActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433656C2162521200607B7B /* FindConsoleActionTest.swift */; };
 		0478723F216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478723E216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift */; };
 		0478724221612AC50019F75F /* InjectionLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724121612AC50019F75F /* InjectionLocalDataSource.swift */; };
 		0478724421612B610019F75F /* GamesContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478724321612B610019F75F /* GamesContracts.swift */; };
@@ -81,6 +93,18 @@
 		04247826216166E7004D121F /* ConsoleFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleFormPresenter.swift; sourceTree = "<group>"; };
 		042478282161699D004D121F /* GameFormContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFormContracts.swift; sourceTree = "<group>"; };
 		0424782A216169EA004D121F /* GabeFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GabeFormPresenter.swift; sourceTree = "<group>"; };
+		043365532162449300607B7B /* RealmShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmShared.swift; sourceTree = "<group>"; };
+		043365552162450300607B7B /* SaveGameActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGameActionTest.swift; sourceTree = "<group>"; };
+		043365582162460F00607B7B /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		0433655B2162497500607B7B /* SaveConsoleActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveConsoleActionTest.swift; sourceTree = "<group>"; };
+		0433655D21624B2400607B7B /* AllGamesActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesActionTest.swift; sourceTree = "<group>"; };
+		0433655F21624D5800607B7B /* GameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBuilder.swift; sourceTree = "<group>"; };
+		0433656221624E5200607B7B /* ConsoleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleBuilder.swift; sourceTree = "<group>"; };
+		0433656421624F6B00607B7B /* DestroyGameActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestroyGameActionTest.swift; sourceTree = "<group>"; };
+		0433656621624F7B00607B7B /* FindGameActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGameActionTest.swift; sourceTree = "<group>"; };
+		043365682162513800607B7B /* AllConsolesActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllConsolesActionTest.swift; sourceTree = "<group>"; };
+		0433656A216251B900607B7B /* DestroyConsoleActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestroyConsoleActionTest.swift; sourceTree = "<group>"; };
+		0433656C2162521200607B7B /* FindConsoleActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindConsoleActionTest.swift; sourceTree = "<group>"; };
 		0478723E216116ED0019F75F /* ConsoleLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		0478724121612AC50019F75F /* InjectionLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionLocalDataSource.swift; sourceTree = "<group>"; };
 		0478724321612B610019F75F /* GamesContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesContracts.swift; sourceTree = "<group>"; };
@@ -164,6 +188,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04336550216243EE00607B7B /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				04336551216243F800607B7B /* Local */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		04336551216243F800607B7B /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				0433655A2162496500607B7B /* Console */,
+				043365522162440200607B7B /* Game */,
+				043365532162449300607B7B /* RealmShared.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		043365522162440200607B7B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				043365552162450300607B7B /* SaveGameActionTest.swift */,
+				0433655D21624B2400607B7B /* AllGamesActionTest.swift */,
+				0433656421624F6B00607B7B /* DestroyGameActionTest.swift */,
+				0433656621624F7B00607B7B /* FindGameActionTest.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		043365572162460700607B7B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0433656121624E4500607B7B /* Builder */,
+				043365582162460F00607B7B /* Action.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0433655A2162496500607B7B /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				0433655B2162497500607B7B /* SaveConsoleActionTest.swift */,
+				043365682162513800607B7B /* AllConsolesActionTest.swift */,
+				0433656A216251B900607B7B /* DestroyConsoleActionTest.swift */,
+				0433656C2162521200607B7B /* FindConsoleActionTest.swift */,
+			);
+			path = Console;
+			sourceTree = "<group>";
+		};
+		0433656121624E4500607B7B /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				0433655F21624D5800607B7B /* GameBuilder.swift */,
+				0433656221624E5200607B7B /* ConsoleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		0478724021612AA10019F75F /* Injections */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +327,8 @@
 		048DE4A22160DF7600FC5DBD /* MyGamesTests */ = {
 			isa = PBXGroup;
 			children = (
+				043365572162460700607B7B /* Common */,
+				04336550216243EE00607B7B /* Infrastructure */,
 				048DE4A32160DF7600FC5DBD /* MyGamesTests.swift */,
 				048DE4A52160DF7600FC5DBD /* Info.plist */,
 			);
@@ -773,6 +857,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043365562162450300607B7B /* SaveGameActionTest.swift in Sources */,
+				0433656321624E5200607B7B /* ConsoleBuilder.swift in Sources */,
+				043365692162513800607B7B /* AllConsolesActionTest.swift in Sources */,
+				043365592162460F00607B7B /* Action.swift in Sources */,
+				0433656521624F6B00607B7B /* DestroyGameActionTest.swift in Sources */,
+				0433656721624F7B00607B7B /* FindGameActionTest.swift in Sources */,
+				0433655C2162497500607B7B /* SaveConsoleActionTest.swift in Sources */,
+				0433655E21624B2400607B7B /* AllGamesActionTest.swift in Sources */,
+				0433656B216251B900607B7B /* DestroyConsoleActionTest.swift in Sources */,
+				0433656021624D5800607B7B /* GameBuilder.swift in Sources */,
+				043365542162449300607B7B /* RealmShared.swift in Sources */,
+				0433656D2162521200607B7B /* FindConsoleActionTest.swift in Sources */,
 				048DE4A42160DF7600FC5DBD /* MyGamesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
