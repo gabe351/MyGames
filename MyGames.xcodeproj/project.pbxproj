@@ -76,6 +76,7 @@
 		04FDA7EC21610EB6007E20BD /* GameLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDA7EB21610EB6007E20BD /* GameLocalDataSourceImpl.swift */; };
 		256E901A710419B3F78D47F9 /* Pods_MyGamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB524F3D14B7CB7781A917C1 /* Pods_MyGamesTests.framework */; };
 		CF31E3C5E821E43C7AF2B2D6 /* Pods_MyGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1869017C6B3BE505A4A678F6 /* Pods_MyGames.framework */; };
+		E7268F602163B40700B2FB59 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7268F5F2163B40700B2FB59 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 		52BC06F84820754363190568 /* Pods-MyGames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGames.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyGames/Pods-MyGames.debug.xcconfig"; sourceTree = "<group>"; };
 		8D11FE58D3269D925864CF26 /* Pods-MyGamesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGamesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyGamesTests/Pods-MyGamesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB524F3D14B7CB7781A917C1 /* Pods_MyGamesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGamesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7268F5F2163B40700B2FB59 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		F8AD884685D986C64C73532F /* Pods-MyGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGamesTests/Pods-MyGamesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -397,6 +399,7 @@
 				048DE4D62160F83C00FC5DBD /* LoadNibUtils.swift */,
 				047872542161325D0019F75F /* GuidGenerator.swift */,
 				04EE766421622C5E00DA40B8 /* DateUtils.swift */,
+				E7268F5F2163B40700B2FB59 /* UIViewControllerExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -611,7 +614,6 @@
 				048DE4882160DF7500FC5DBD /* Frameworks */,
 				048DE4892160DF7500FC5DBD /* Resources */,
 				9BC363B33EB93E4D224F205C /* [CP] Embed Pods Frameworks */,
-				E8ACB86B3A9441E74C34AF84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -631,7 +633,6 @@
 				048DE49C2160DF7600FC5DBD /* Frameworks */,
 				048DE49D2160DF7600FC5DBD /* Resources */,
 				3A0DBA7072BE6F3E3C4B00A8 /* [CP] Embed Pods Frameworks */,
-				7C8036DEF09AD08E53186DBE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -713,28 +714,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyGamesTests/Pods-MyGamesTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGamesTests/Pods-MyGamesTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C8036DEF09AD08E53186DBE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGamesTests/Pods-MyGamesTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BC363B33EB93E4D224F205C /* [CP] Embed Pods Frameworks */ = {
@@ -743,9 +734,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyGames/Pods-MyGames-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -758,13 +754,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyGames-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1D8C2E3C06DB26C16CC851A /* [CP] Check Pods Manifest.lock */ = {
@@ -773,28 +772,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyGamesTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E8ACB86B3A9441E74C34AF84 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGames/Pods-MyGames-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -837,6 +824,7 @@
 				04247827216166E7004D121F /* ConsoleFormPresenter.swift in Sources */,
 				0478725E2161398B0019F75F /* DeleteGame.swift in Sources */,
 				04FDA7EC21610EB6007E20BD /* GameLocalDataSourceImpl.swift in Sources */,
+				E7268F602163B40700B2FB59 /* UIViewControllerExtension.swift in Sources */,
 				048DE4E32160FB3900FC5DBD /* ConsoleFormViewController.swift in Sources */,
 				048DE4C92160F0A500FC5DBD /* BaseTableViewContract.swift in Sources */,
 				04787250216130150019F75F /* SaveGame.swift in Sources */,

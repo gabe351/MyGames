@@ -2,7 +2,7 @@
 //  UIViewControllerExtension.swift
 //  MyGames
 //
-//  Created by StantMBP on 01/10/18.
+//  Created by StantMBP on 02/10/18.
 //  Copyright © 2018 Gabe. All rights reserved.
 //
 
@@ -18,6 +18,6 @@ extension UIViewController {
     }
     
     @objc func dismissKeyboard() {
-        view.endEditing(true)        
+        view.endEditing(true)
     }
 }
